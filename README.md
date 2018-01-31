@@ -67,4 +67,4 @@ again
 
 #### 6. Build the sample application
 
- ```make
+ 	```make```
