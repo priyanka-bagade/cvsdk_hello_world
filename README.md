@@ -32,10 +32,25 @@ This example uses a Single Shot MultiBox Detector (SSD) on GoogleNet model. The 
 	
 #### 2. Provide an example of what success looks like in this module
 
-	> Show a side-by-side comparison of the pedestrian video clip: original vs with bounding boxes
+> Show a side-by-side comparison of the pedestrian video clip: original vs with bounding boxes
 	
 #### 3. Conceptual diagram: E2E video application developer journey map
 
-	> (continue to show this throughout the module as it changes? i.e. ‘you are here’)
+> (continue to show this throughout the module as it changes? i.e. ‘you are here’)
 
 ## Optimize a deep-learning model using the Intel® Model Optimizer
+
+#### 1. Navigate to the sample application directory
+
+	```cd opt/intel/tutorials/cvsdk/samples/ped_detection```
+
+#### 2. Run the Intel Model Optimizer on the trained Caffe model — generates two fi les (.xml and .bin) in <current_dir>/artifacts
+
+> Model Optimizer converts a trained Caffe model to be compatible with the Intel Inference Engine and optimizes it for Intel
+architecture
+> These are the files you would include with your C++ application to apply inference to visual data
+> Note: if you continue to train/update the Caffe model, you would then need to re-run the MO to convert/optimize
+again
+
+#### 3. Exit super user mode
+	```exit```
