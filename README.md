@@ -1,4 +1,4 @@
-# Intel Computer Vision SDK | Hello World Tutorial
+# Intel® Computer Vision SDK | Hello World Tutorial
 
 
 ## Prerequisite checklist
@@ -10,11 +10,11 @@
 
 #### 1. Create new directory opt/intel/tutorials/cvsdk
 
-	mkdir opt/intel/tutorials/cvsdk
+	mkdir -p /opt/intel/tutorials/cvsdk
 
 #### 2. Navigate to the new directory
 
-	cd opt/intel/tutorials/cvsdk
+	cd /opt/intel/tutorials/cvsdk
 
 #### 3. Download/clone tutorial files to current directory (opt/intel/tutorials/cvsdk) which includes the following sub-directories: models, samples, videos, images
 
@@ -40,13 +40,17 @@ This example uses a Single Shot MultiBox Detector (SSD) on GoogleNet model. The 
 
 > (continue to show this throughout the module as it changes? i.e. ‘you are here’)
 
-## Optimize a deep-learning model using the Intel® Model Optimizer
+## Optimize a deep-learning model using the Intel® Model Optimizer (MO)
 
 #### 1. Navigate to the sample application directory
 
 	cd opt/intel/tutorials/cvsdk/samples/ped_detection
 
 #### 2. Run the Intel Model Optimizer on the trained Caffe model — generates two fi les (.xml and .bin) in <current_dir>/artifacts
+
+	```sudo su```
+	```source /opt/intel/computer_vision_sdk_2017.1.163/bin/setupvars.sh```
+	```python runMO.py -w SSD_GoogleNetV2_caffe/SSD_GoogleNetV2.caffemodel -d SSD_GoogleNetV2_caffe/SSD_GoogleNetV2_Deploy.prototxt```
 
 > Model Optimizer converts a trained Caffe model to be compatible with the Intel Inference Engine and optimizes it for Intel
 architecture
@@ -60,9 +64,9 @@ again
 
 ## Use the optimized models and Inference Engine in a pedestrian detection application
 
-#### 1. Open the sample app source code to view the lines which call the IR.
+#### 1. Open the sample app source code to view the lines which call the Inference Engine.
 
-> Explain how the application is calling the IR and setting parameters to define what they want to do. Give an example of how this can be changed to achieve different results and mention the related tutorial to learn more.
+> Explain how the application is calling the inference engine and setting parameters to define what they want to do. Give an example of how this can be changed to achieve different results and mention the related tutorial to learn more.
 
 #### 2. Close the source file
 
