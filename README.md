@@ -132,6 +132,6 @@ VOC0712_SSD_300x300_deploy.xml -d CPU -l pascal_voc_classes.txt
 
 ## Additional resources
 
-- CV SDK landing page (IDZ)
+- [CV SDK landing page (IDZ)](https://software.intel.com/en-us/computer-vision-sdk?cid=sem43700020075377675&intel_term=computer+vision+sdk&gclid=CjwKCAiA9f7QBRBpEiwApLGUit1KXgtbu46anzhcsxJVBltKW-JOxPzucCmBxVDZwI_1H4FYgQZ-3RoC96sQAvD_BwE&gclsrc=aw.ds)
 - Developer guide
 - API references
