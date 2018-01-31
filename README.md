@@ -18,3 +18,9 @@
 following sub-directories: models, samples, videos, images
 
 	```git clone https://github.com/intel-iot-devkit/computer-vision-hello-world.git```
+
+<div class="alert tip">
+
+<p><strong>Tip:</strong> When viewing a conversation, you can automatically quote text in a reply by highlighting the text, then typing <code>r</code>. For more information, see "<a href="/articles/using-keyboard-shortcuts/">Using keyboard shortcuts</a>."</p>
+
+</div>
