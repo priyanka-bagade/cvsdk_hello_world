@@ -1,5 +1,6 @@
 # Intel Computer Vision SDK | Hello World Tutorial
 
+
 ## Prerequisite Checklist
 - [ ] Verify HW compatibility
 - [ ] Install OpenCL and other dependencies
@@ -17,10 +18,12 @@
 
 #### 3. Download/clone tutorial files to current directory (opt/intel/tutorials/cvsdk) which includes the following sub-directories: models, samples, videos, images
 
-	```git clone https://github.com/intel-iot-devkit/computer-vision-hello-world.git```
+	git clone https://github.com/intel-iot-devkit/computer-vision-hello-world.git
+
 
 
 # Part 1: How to optimize and deploy a deep learning model for Pedestrian Detection (~15mins)
+
 
 ## Introduction and Learning Goals
 
