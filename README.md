@@ -1,7 +1,7 @@
 # Intel Computer Vision SDK | Hello World Tutorial
 
 
-## Prerequisite Checklist
+## Prerequisite checklist
 - [ ] Verify HW compatibility
 - [ ] Install OpenCL and other dependencies
 - [ ] Install the CV SDK and set environment variables
@@ -10,11 +10,11 @@
 
 #### 1. Create new directory opt/intel/tutorials/cvsdk
 
-	```mkdir opt/intel/tutorials/cvsdk```
+	mkdir opt/intel/tutorials/cvsdk
 
 #### 2. Navigate to the new directory
 
-	```cd opt/intel/tutorials/cvsdk```
+	cd opt/intel/tutorials/cvsdk
 
 #### 3. Download/clone tutorial files to current directory (opt/intel/tutorials/cvsdk) which includes the following sub-directories: models, samples, videos, images
 
@@ -22,10 +22,10 @@
 
 
 
-# Part 1: How to optimize and deploy a deep learning model for Pedestrian Detection (~15mins)
+# Part 1: How to optimize and deploy a deep learning model for pedestrian detection (~15mins)
 
 
-## Introduction and Learning Goals
+## Introduction and learning goals
 
 #### 1. Introduction and overview of what you’re about to learn and why you would care
 
@@ -45,7 +45,7 @@ This example uses a Single Shot MultiBox Detector (SSD) on GoogleNet model. The 
 
 #### 1. Navigate to the sample application directory
 
-	```cd opt/intel/tutorials/cvsdk/samples/ped_detection```
+	cd opt/intel/tutorials/cvsdk/samples/ped_detection
 
 #### 2. Run the Intel Model Optimizer on the trained Caffe model — generates two fi les (.xml and .bin) in <current_dir>/artifacts
 
@@ -56,4 +56,15 @@ architecture
 again
 
 #### 3. Exit super user mode
-	```exit```
+	
+	exit
+
+#### 4. Open the sample app source code to view the lines which call the IR.
+
+> Explain how the application is calling the IR and setting parameters to define what they want to do. Give an example of how this can be changed to achieve different results and mention the related tutorial to learn more.
+
+#### 5. Close the source file
+
+#### 6. Build the sample application
+
+ make
