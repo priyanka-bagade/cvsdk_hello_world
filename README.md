@@ -113,10 +113,25 @@ This example uses a Single Shot MultiBox Detector (SSD) on GoogleNet model. The 
 #### 2. Create a copy of the ped_detection folder and rename it car_detection (cp -r ped_detection car_
 detection)
 #### 3. Open the object detection sample app source code to view the lines which call the IR.
-#### 4. David to define the steps to update the app.
+#### 4. *David to define the steps to update the app.
 #### 5. Save and close the source file.
 #### 6. Build the sample application
 #### 7. Run the updated sample application to call the Inference Engine
 
-```./IEobjectdetection -i opt/intel/tutorials/cvsdk/videos/vtest.avi -fr 200 -m artifacts/VGG_VOC0712_SSD_300x300_deploy/VGG_
-VOC0712_SSD_300x300_deploy.xml -d CPU -l pascal_voc_classes.txt```
+./IEobjectdetection -i opt/intel/tutorials/cvsdk/videos/vtest.avi -fr 200 -m artifacts/VGG_VOC0712_SSD_300x300_deploy/VGG_
+VOC0712_SSD_300x300_deploy.xml -d CPU -l pascal_voc_classes.txt
+
+## \(Optional) Explore using different parameters to see how they affect the results
+
+#### 1. *define some suggested activities here and describe what should happen/what it means*
+
+## Part 2 recap
+
+#### 1. *Provide a quick recap of what you did and why you care*
+#### 2. *link to the next logical tutorial(s) in the learning path
+
+## Additional resources
+
+#### 1. CV SDK landing page (IDZ)
+#### 2. Developer guide
+#### 3. API references
