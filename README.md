@@ -44,7 +44,7 @@ This example uses a Single Shot MultiBox Detector (SSD) on GoogleNet model. The 
 
 #### 1. Navigate to the sample application directory
 
-	cd opt/intel/tutorials/cvsdk/samples/ped_detection
+	cd /opt/intel/tutorials/cvsdk/samples/ped_detection
 
 #### 2. Run the Intel Model Optimizer on the trained Caffe model — generates two fi les (.xml and .bin) in <current_dir>/artifacts
 
