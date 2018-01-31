@@ -1,4 +1,4 @@
-# Intel Computer Vision SDK
+# Intel Computer Vision SDK | Hello World Tutorial
 
 ## Prerequisite Checklist
 1. Verify HW compatibility
@@ -19,8 +19,20 @@ following sub-directories: models, samples, videos, images
 
 	```git clone https://github.com/intel-iot-devkit/computer-vision-hello-world.git```
 
-<div class="alert tip">
+# Part 1: How to optimize and deploy a deep learning model for Pedestrian Detection (~15mins)
 
-<p><strong>Tip:</strong> When viewing a conversation, you can automatically quote text in a reply by highlighting the text, then typing <code>r</code>. For more information, see "<a href="/articles/using-keyboard-shortcuts/">Using keyboard shortcuts</a>."</p>
+## Introduction and Learning Goals
 
-</div>
+1. Introduction and overview of what you’re about to learn and why you would care
+
+This tutorial will walk you through the basics of using the Deep Learning Deployment Toolkit’s Inference Engine (included in the Intel® Computer Vision SDK). Here, inference is the process of using a trained neural network to infer meaning from data (e.g., images). In the code sample that follows, a video (frame by frame) is fed to the Inference Engine (our trained neural network) which then outputs a result (classification of an image). Inference can be done using various neural network architectures (AlexNet*, GoogleNet*, etc.). 
+
+This example uses a Single Shot MultiBox Detector (SSD) on GoogleNet model. The Inference Engine requires that the model be converted to IR (Intermediate Representation) files. This tutorial will walk you through the basics taking an existing model (GoogleNet) and converting it to IR (Intermediate Representation) files using the Model Optimizer.
+	
+2. Provide an example of what success looks like in this module
+
+> Show a side-by-side comparison of the pedestrian video clip: original vs with bounding boxes
+	
+3. Conceptual diagram: E2E video application developer journey map
+
+> (continue to show this throughout the module as it changes? i.e. ‘you are here’)
