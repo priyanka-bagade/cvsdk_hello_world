@@ -1,9 +1,9 @@
 # Intel Computer Vision SDK | Hello World Tutorial
 
 ## Prerequisite Checklist
-#### 1. Verify HW compatibility
-#### 2. Install OpenCL and other dependencies
-#### 3. Install the CV SDK and set environment variables
+- [ ] Verify HW compatibility
+- [ ] Install OpenCL and other dependencies
+- [ ] Install the CV SDK and set environment variables
 
 ## Install the Hello World tutorial support files (trained models, videos, images)
 
