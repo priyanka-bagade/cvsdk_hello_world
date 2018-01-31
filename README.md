@@ -21,7 +21,6 @@
 	git clone https://github.com/intel-iot-devkit/computer-vision-hello-world.git
 
 
-
 # Part 1: How to optimize and deploy a deep learning model for pedestrian detection (~15mins)
 
 
