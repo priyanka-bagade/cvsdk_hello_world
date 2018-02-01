@@ -42,7 +42,7 @@ This tuturial is important to learning about deep learning and the Intel® CV SD
 In addition, once you know how to identify individuals, you will be able expand on this tutorial inference to search for other items, such as animals or vehicles to satisfy other use cases.
 
 
-#### Below is an example of what you will be doing in this tutorial. *(Deanne, please edit this for me...)*
+#### Below is an example of what you will be doing in this tutorial. *(Deanne, please edit this descriptive text...)*
 
 ![alt text](https://github.com/hunnel/cvsdk_hello_world/blob/master/images/1-obj_detect_ped_demo_3.jpg "pedestrian detection success")
 	
