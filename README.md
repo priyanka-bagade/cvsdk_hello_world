@@ -44,7 +44,7 @@ U addition, once you know how to identify individuals, you will be able expand o
 
 #### 2. Provide an example of what success looks like in this module
 
-	![alt text](https://github.com/hunnel/cvsdk_hello_world/blob/master/images/1-obj_detect_ped_demo_3.jpg "pedestrian detection success")
+![alt text](https://github.com/hunnel/cvsdk_hello_world/blob/master/images/1-obj_detect_ped_demo_3.jpg "pedestrian detection success")
 	
 #### 3. Conceptual diagram: End-to-end video application developer journey map
 
