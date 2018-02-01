@@ -39,10 +39,10 @@ This tuturial is important to learning about deep learning and the Intel® CV SD
 - Triggering an action if Inference detects someone entering an environment. For example, a homeowner might want to be alerted if a person walks onto their property, but not an animal.
 - Comparing the count of people leaving an environment to the count of people entering the environment. For example, a store might want to be alerted at closing time that someone might still be on the premises.
 
-U addition, once you know how to identify individuals, you will be able expand on this tutorial inference to search for other items, such as animals or vehicles to satisfy other use cases.
+In addition, once you know how to identify individuals, you will be able expand on this tutorial inference to search for other items, such as animals or vehicles to satisfy other use cases.
 
 
-#### 2. Provide an example of what success looks like in this module
+#### 2. Below is an example of what you will be doing in this tutorial. *(Deanne, please edit this for me...)*
 
 ![alt text](https://github.com/hunnel/cvsdk_hello_world/blob/master/images/1-obj_detect_ped_demo_3.jpg "pedestrian detection success")
 	
