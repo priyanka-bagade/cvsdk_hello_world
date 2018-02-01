@@ -26,7 +26,7 @@
 
 ## Introduction and learning goals
 
-#### 1. What you’re about to learn and why it is important
+#### What you’re about to learn and why it is important
 
 This tutorial uses a Single Shot MultiBox Detector (SSD) on a trained GoogleNet* model to walk you through the basic steps of using the Deep Learning Deployment Toolkit’s Inference Engine, included in the Intel® CV SDK. Although this tutorial uses GoogleNet, on your own, you can perform inference on other neural network architectures, such as AlexNet*. 
 
@@ -42,11 +42,11 @@ This tuturial is important to learning about deep learning and the Intel® CV SD
 In addition, once you know how to identify individuals, you will be able expand on this tutorial inference to search for other items, such as animals or vehicles to satisfy other use cases.
 
 
-#### 2. Below is an example of what you will be doing in this tutorial. *(Deanne, please edit this for me...)*
+#### Below is an example of what you will be doing in this tutorial. *(Deanne, please edit this for me...)*
 
 ![alt text](https://github.com/hunnel/cvsdk_hello_world/blob/master/images/1-obj_detect_ped_demo_3.jpg "pedestrian detection success")
 	
-#### 3. Conceptual diagram: End-to-end video application developer journey map
+#### Conceptual diagram: End-to-end video application developer journey map
 
 > (continue to show this throughout the module as it changes? i.e. ‘you are here’)
 
