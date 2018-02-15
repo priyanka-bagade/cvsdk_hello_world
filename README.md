@@ -46,9 +46,9 @@ In addition, once you know how to identify individuals, you will be able expand 
 
 ![alt text](https://github.com/hunnel/cvsdk_hello_world/blob/master/images/1-obj_detect_ped_demo_3.jpg "pedestrian detection success")
 	
-#### Conceptual diagram: End-to-end video application developer journey map
+#### Overview of an E2E Computer Vision Application
 
-> (continue to show this throughout the module as it changes? i.e. ‘you are here’)
+![alt text](https://github.com/hunnel/cvsdk_hello_world/blob/master/images/E2E_computer_vision_overview_Artboard 1 copy.png "E2E Computer Vision Workflow")
 
 ## Optimize a deep-learning model using the Intel® Model Optimizer (MO)
 
