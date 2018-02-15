@@ -48,7 +48,7 @@ In addition, once you know how to identify individuals, you will be able expand 
 	
 #### Overview of an E2E Computer Vision Application
 
-![alt text](https://github.com/hunnel/cvsdk_hello_world/blob/master/images/E2E_computer_vision_overview_Artboard 1 copy.png "E2E Computer Vision Workflow")
+![alt text](https://github.com/hunnel/cvsdk_hello_world/blob/master/images/e2e_cv_diagram.png "E2E Computer Vision Workflow")
 
 ## Optimize a deep-learning model using the Intel® Model Optimizer (MO)
 
