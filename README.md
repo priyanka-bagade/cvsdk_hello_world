@@ -3,8 +3,8 @@
 
 ## Prerequisite checklist
 - [ ] Verify hardware compatibility
-- [ ] Install OpenCL® and other dependencies
-- [ ] Install the Intel® CV SDK and set environment variables
+- [ ] [Install OpenCL® and other dependencies](https://software.intel.com/en-us/articles/opencl-drivers)
+- [ ] [Install the Intel® CV SDK and set environment variables](https://software.intel.com/en-us/cvsdk-installguide-installing-on-linux-os)
 
 ## Install the Hello World tutorial support files (trained models, videos, images)
 
@@ -18,7 +18,7 @@
 
 #### 3. Download and clone the tutorial content to the current directory (opt/intel/tutorials/cvsdk). Four sub-directories are created: models, samples, videos, images
 
-	git clone https://github.com/intel-iot-devkit/computer-vision-hello-world.git
+	git clone https://github.com/hunnel/cvsdk_hello_world.git
 
 
 # Part 1: Optimizing and deploying a deep learning model for pedestrian detection (~15 minutes)
@@ -68,7 +68,9 @@ architecture
 > Note: if you continue to train/update the Caffe model, you would then need to re-run the Model Optimizer to convert/optimize
 again
 
-#### 3. Exit super user mode
+#### 3. Verify creation of the optimized model files (.IR)
+
+#### 4. Exit super user mode
 	
 	exit
 
@@ -86,6 +88,7 @@ again
 
 #### 4. Run the pedestrian detection sample application to use the Inference Engine on a video 
 *Explain the parameters prior to running the app*
+*Note: If you get an error related to "undefined reference to 'google::FlagRegisterer...", try uninstalling libgflags-dev: sudo apt-get remove libgflags-dev*
 
 	./IEobjectdetection -i opt/intel/tutorials/cvsdk/videos/vtest.avi -fr 200 -m artifacts/VGG_VOC0712_SSD_300x300_deploy/VGG_VOC0712_SSD_300x300_deploy.xml -d CPU -l pascal_voc_classes.txt
 
