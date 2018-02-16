@@ -69,6 +69,16 @@ architecture
 again
 
 #### 3. Verify creation of the optimized model files (.IR)
+Look in the ```/artifacts/VGG_VOC0712_SSD_300x300_deploy``` folder.
+```
+cd artifacts/VGG_VOC0712_SSD_300x300_deploy
+ls
+```
+Check that
+```VGG_VOC0712_SSD_300x300_deploy.xml```
+and
+```VGG_VOC0712_SSD_300x300_deploy.bin```
+were created in that directory
 
 #### 4. Exit super user mode
 	
@@ -83,6 +93,12 @@ again
 #### 2. Close the source file
 
 #### 3. Build the sample application
+First set the paths:
+```
+source /opt/intel/computer_vision_sdk_2017.1.163/bin/setupvars.sh
+```
+
+Then build:
 
  	make
 
