@@ -162,7 +162,7 @@ VOC0712_SSD_300x300_deploy.xml -d CPU -l pascal_voc_classes.txt
 
 ## \(Optional) Explore using different parameters to see how they affect the results
 
-#### 1. *define some suggested activities here and describe what should happen/what it means*
+#### 1. *define suggested activities here and describe what should happen/what it means*
 
 ## Part 2 recap
 
