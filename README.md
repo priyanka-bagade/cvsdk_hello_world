@@ -1,5 +1,7 @@
 # Intel® Computer Vision SDK | Hello World Tutorial
 
+<br>
+
 ## Prerequisite checklist
 - [ ] [Verify hardware compatibility](https://software.intel.com/en-us/computer-vision-sdk?cid=sem43700020075377675&intel_term=computer+vision+sdk&gclid=CjwKCAiA9f7QBRBpEiwApLGUit1KXgtbu46anzhcsxJVBltKW-JOxPzucCmBxVDZwI_1H4FYgQZ-3RoC96sQAvD_BwE&gclsrc=aw.ds)
 - [ ] [Install OpenCL® and other dependencies](https://software.intel.com/en-us/articles/opencl-drivers)
@@ -43,7 +45,7 @@ The photo below shows an example frame from the inferred video. The red boxes ar
 
 <br>
 
-### Overview of an end-to-end Computer Vision Application
+### Overview of an end-to-end computer vision application
 
 The figure below shows you the full end-to-end computer vision application process. Some of the components shown are not part of the Intel® CV SDK, but are included in the diagram to help illustrate a complete E2E CV process.  
 
@@ -74,11 +76,12 @@ This video in this tutorial prepares you for more difficult deep learning scenar
 - Comparing the number of people leaving an environment to the number of people who entered the environment. For example, a store might want to be alerted at closing time that someone might still be on the premises.
 
 <br>
-<br>
-
 
 ***
-   
+
+<br>   
+<br>
+
 ## Optimize a deep-learning model using the Model Optimizer (MO)
 
 <br>
@@ -108,9 +111,6 @@ This video in this tutorial prepares you for more difficult deep learning scenar
 	exit
 
 <br>
-
-***
-
 <br>
 
 ## Use the optimized models and Inference Engine in a pedestrian detection application
@@ -142,9 +142,11 @@ see the output in the console showing the objects found and the confidence level
 #### 1. *define some suggested activities here and describe what should happen/what it means*
 
 <br>
+<br>
 
 ***
 
+<br>
 <br>
    
 ## Recap
@@ -169,6 +171,7 @@ Key takeaways from this tutorial:
 - [Developer guide](https://software.intel.com/en-us/cvsdk-inference-engine-apiref)
 - [API references](https://software.intel.com/en-us/inference-engine-devguide)
 
+<br>
 <br>
 
 ***
