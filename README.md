@@ -96,7 +96,7 @@ This video in this tutorial prepares you for more difficult deep learning scenar
 
 The Model Optimizer converts a trained Caffe model to be compatible with the Intel Inference Engine and optimizes it for Intel architecture. These are the files you would include with your C++ application to apply inference to visual data.
 	
-	> Note: if you continue to train/update the Caffe model, you would then need to re-run the Model Optimizer to convert/optimize again
+> Note: if you continue to train/update the Caffe model, you would then need to re-run the Model Optimizer on the updated model.
 
 #### 3. Verify creation of the optimized model files (the IR files)
 
@@ -138,7 +138,8 @@ You should see the following two files listed in this directory: **VGG_VOC0712_S
 
 	```./IEobjectdetection -i opt/intel/tutorials/cvsdk/videos/vtest.avi -fr 200 -m artifacts/VGG_VOC0712_SSD_300x300_deploy/VGG_VOC0712_SSD_300x300_deploy.xml -d CPU -l pascal_voc_classes.txt```
 
-> You should see a video play with people walking across and red bounding boxes around them. You should also
+
+You should see a video play with people walking across and red bounding boxes around them. You should also
 see the output in the console showing the objects found and the confidence level. The higher the confidence level, the more likely the model is correctly identifying and drawing bounding boxes around pedestrians in the video. (for example: 0.83 is more confident than 0.23)
 
 ##### *Note: If you get an error related to "undefined reference to 'google::FlagRegisterer...", try uninstalling libgflags-dev: sudo apt-get remove libgflags-dev*
@@ -160,10 +161,10 @@ see the output in the console showing the objects found and the confidence level
 ## Recap
 
 Key takeaways from this tutorial:
-	- How to run the Model Optimizer against a trained Caffe model to create the optimized .IR files.
-	- How to call the .IR files and Inference Engine from an application.
-	- How to run a CV application using the optimized model and Inference Engine to analyze video data and apply application logic, in this case, identifying pedestrians.
-	- Explore and modify application parameters to achieve various results.
+- How to run the Model Optimizer against a trained Caffe model to create the optimized .IR files.
+- How to call the .IR files and Inference Engine from an application.
+- How to run a CV application using the optimized model and Inference Engine to analyze video data and apply application logic, in this case, identifying pedestrians.
+- Explore and modify application parameters to achieve various results.
 
 <br>
 
