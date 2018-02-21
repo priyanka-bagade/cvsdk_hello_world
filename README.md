@@ -1,4 +1,4 @@
-## Intel® Computer Vision SDK | Hello World Tutorial
+# Intel® Computer Vision SDK | Hello World Tutorial
 
 
 ### Prerequisite checklist
@@ -28,7 +28,7 @@
 ## Part 1: Optimize and deploy a deep learning model for pedestrian detection (~15 minutes)
 
 
-## Introduction and learning goals
+### Introduction and learning goals
 
 #### What you’re about to learn
 
@@ -72,7 +72,7 @@ This video in this tutorial prepares you for more difficult deep learning scenar
 
 
 
-## Optimize a deep-learning model using the Model Optimizer (MO)
+### Optimize a deep-learning model using the Model Optimizer (MO)
 
 #### 1. Navigate to the sample directory
 
@@ -98,7 +98,8 @@ This video in this tutorial prepares you for more difficult deep learning scenar
 
 	exit
 
-## Use the optimized models and Inference Engine in a pedestrian detection application
+
+### Use the optimized models and Inference Engine in a pedestrian detection application
 
 #### 1. Open the sample app source code to view the lines that call the Inference Engine.
 
@@ -120,11 +121,11 @@ This video in this tutorial prepares you for more difficult deep learning scenar
 > You should see a video play with people walking across and red bounding boxes around them. You should also
 see the output in the console showing the objects found and the confidence level. The higher the confidence level, the more likely the model is correctly identifying and drawing bounding boxes around pedestrians in the video. (for example: 0.83 is more confident than 0.23)
 
-## \(Optional) Explore using different parameters to see how they affect the results
+### \(Optional) Explore using different parameters to see how they affect the results
 
 #### 1. *define some suggested activities here and describe what should happen/what it means*
 
-## Recap
+### Recap
 
 Key takeaways from this tutorial:
 - How to run the Model Optimizer against a trained Caffe model to create the optimized .IR files.
@@ -132,11 +133,11 @@ Key takeaways from this tutorial:
 - How to run a CV application using the optimized model and Inference Engine to analyze video data and apply application logic, in this case, identifying pedestrians.
 - Explore and modify application parameters to achieve various results.
 
-## Next Steps
+### Next Steps
 
 [Hello World | Part 2: Re-purpose a Pedestrian Detection application to identify cars (coming soon)](https://)
 
-## Additional resources
+### Additional resources
 
 - [CV SDK developer portal (IDZ)](https://software.intel.com/en-us/computer-vision-sdk?cid=sem43700020075377675&intel_term=computer+vision+sdk&gclid=CjwKCAiA9f7QBRBpEiwApLGUit1KXgtbu46anzhcsxJVBltKW-JOxPzucCmBxVDZwI_1H4FYgQZ-3RoC96sQAvD_BwE&gclsrc=aw.ds)
 - [Developer guide](https://software.intel.com/en-us/cvsdk-inference-engine-apiref)
