@@ -1,3 +1,4 @@
+
 # Intel® Computer Vision SDK | Hello World Tutorial
 
 <br>
@@ -41,7 +42,7 @@ You will then use Inference on the IR files. Inference is the process of using a
 
 The photo below shows an example frame from the inferred video. The red boxes around the individuals are the result of using the Inference Engine to identify pedestrians. In the original video, the boxes do not exist. The Inference Engine identified the objects in the video that it inferred to be pedestrians and drew the identifying boxes around them.
 
-![alt text](https://github.com/hunnel/cvsdk_hello_world/blob/master/images/1-obj_detect_ped_demo_3.jpg "pedestrian detection success")
+![image of pedestrians with red bounding boxes](https://github.com/hunnel/cvsdk_hello_world/blob/master/images/1-obj_detect_ped_demo_3.jpg "pedestrian detection success")
 
 <br>
 
@@ -55,7 +56,7 @@ After your trained model is completed, you are ready to use the Intel® CV SDK i
 
 Once you have used the Model Optimizer and integrated the applicable components, you are ready to deploy your application at the edge. This piece of the process uses the Inference component of the Intel® CV SDK. In this tutorial, deployment is represented by using the video provided with this tutorial instead of using data directly from a video camera or on a separate piece of hardware.
 
-![alt text](https://github.com/hunnel/cvsdk_hello_world/blob/master/images/e2e_cv_diagram.png "End-to-end computer vision workflow")
+![Diagram of an end-to-end computer vision workflow](https://github.com/hunnel/cvsdk_hello_world/blob/master/images/e2e_cv_diagram.png "End-to-end computer vision workflow")
 
 **In the figure:**
 - The blue boxes highlight the focus of this tutorial.
@@ -88,15 +89,15 @@ This video in this tutorial prepares you for more difficult deep learning scenar
 
 	cd /opt/intel/tutorials/cvsdk_hello_world/samples/
 
-#### 2. Run the Model Optimizer on the trained Caffe* model. This step generates one .xml file and one .bin file, both in the directory  <current_dir>/artifacts
+#### 2. Run the Model Optimizer on the pretrained Caffe* model. This step generates one .xml file and one .bin file, both in the directory  <current_dir>/artifacts
 
-	```sudo su```
-	```source /opt/intel/computer_vision_sdk_2017.1.163/bin/setupvars.sh```
-	```python runMO.py -w SSD_GoogleNetV2_caffe/SSD_GoogleNetV2.caffemodel -d SSD_GoogleNetV2_caffe/SSD_GoogleNetV2_Deploy.prototxt```
+	sudo su
+	source /opt/intel/computer_vision_sdk_2017.1.163/bin/setupvars.sh
+	python runMO.py -w SSD_GoogleNetV2_caffe/SSD_GoogleNetV2.caffemodel -d SSD_GoogleNetV2_caffe/SSD_GoogleNetV2_Deploy.prototxt
 
-The Model Optimizer converts a trained Caffe model to be compatible with the Intel Inference Engine and optimizes it for Intel architecture. These are the files you would include with your C++ application to apply inference to visual data.
+The Model Optimizer converts a pretrained Caffe model to be compatible with the Intel Inference Engine and optimizes it for Intel architecture. These are the files you would include with your C++ application to apply inference to visual data.
 	
-> **Note:** if you continue to train/update the Caffe model, you would then need to re-run the Model Optimizer on the updated model.
+> **Note:** if you continue to train or make changes to the Caffe model, you would then need to re-run the Model Optimizer on the updated model.
 
 #### 3. Verify creation of the optimized model files (the IR files)
 
@@ -114,11 +115,11 @@ You should see the following two files listed in this directory: **VGG_VOC0712_S
 ## Use the optimized models and Inference Engine in a pedestrian detection application
 
 #### 1. Open the sample app source code to view the lines that call the Inference Engine.
-<ul>
+<ul><ul>
 	<li> Lines x through x call the Inference Engine
 	<li> Lines x through x reference the optimized model files (**VGG_VOC0712_SSD_300x300_deploy.xml** and **VGG_VOC0712_SSD_300x300_deploy.bin**)
 	<li> Lines x through x define the confidence interval and...
-</ul>
+</ul></ul>
 
 #### 2. Close the source file
 
@@ -127,8 +128,8 @@ You should see the following two files listed in this directory: **VGG_VOC0712_S
  	make
 
 #### 4. Run the pedestrian detection sample application to use the Inference Engine on a video
-The below command runs the application using the following parameters:
-	<ul><ul>
+The below command runs the application using the following parameters: 
+<ul><ul>
 		<li> number of frames to process (-fr)
 		<li> location of the optimized deep-learning model (-m)
 		<li> target device (CPU or GPU) to be used for inference (-d)
