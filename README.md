@@ -102,7 +102,7 @@ This video in this tutorial prepares you for more difficult deep learning scenar
 
 	ls
 
-	> You should see the following two files listed in this directory: VGG_VOC0712_SSD_300x300_deploy.xml and VGG_VOC0712_SSD_300x300_deploy.bin
+> You should see the following two files listed in this directory: **VGG_VOC0712_SSD_300x300_deploy.xml** and **VGG_VOC0712_SSD_300x300_deploy.bin**
 
 #### 4. Exit super user mode
 
@@ -115,7 +115,9 @@ This video in this tutorial prepares you for more difficult deep learning scenar
 
 #### 1. Open the sample app source code to view the lines that call the Inference Engine.
 
-> Explain how the application is calling the inference engine and setting parameters to define what they want to do. Give an example of how this can be changed to achieve different results and mention the related tutorial to learn more.
+Lines x through x call the Inference Engine
+Lines x through x reference the optimized model files (**VGG_VOC0712_SSD_300x300_deploy.xml** and **VGG_VOC0712_SSD_300x300_deploy.bin**)
+Lines x through x define the confidence interval and...
 
 #### 2. Close the source file
 
