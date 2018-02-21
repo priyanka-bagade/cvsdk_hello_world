@@ -17,7 +17,7 @@
 
 	mkdir -p /opt/intel/tutorials/cvsdk_hello_world
 
-#### 2. Change ownership of the tutorials directory to current user
+#### 2. Change ownership of the tutorial directory to current user
 
 	sudo chown –R <user.user> /opt/intel/tutorials/cvsdk_hello_world
 
