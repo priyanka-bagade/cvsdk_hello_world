@@ -129,7 +129,7 @@ You should see the following two files listed in this directory: **VGG_VOC0712_S
 #### 4. Run the pedestrian detection sample application to use the Inference Engine on a video
 The below command runs the application using the following parameters:
 	<ul><ul>
-		<li> number of frames from the video to process (-fr)
+		<li> number of frames to process (-fr)
 		<li> location of the optimized deep-learning model (-m)
 		<li> target device (CPU or GPU) to be used for inference (-d)
 		<li> data labels list location (-l)
