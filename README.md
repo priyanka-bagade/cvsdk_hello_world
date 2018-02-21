@@ -94,15 +94,15 @@ This video in this tutorial prepares you for more difficult deep learning scenar
 	```source /opt/intel/computer_vision_sdk_2017.1.163/bin/setupvars.sh```
 	```python runMO.py -w SSD_GoogleNetV2_caffe/SSD_GoogleNetV2.caffemodel -d SSD_GoogleNetV2_caffe/SSD_GoogleNetV2_Deploy.prototxt```
 
-> The Model Optimizer converts a trained Caffe model to be compatible with the Intel Inference Engine and optimizes it for Intel architecture
-> These are the files you would include with your C++ application to apply inference to visual data
-> Note: if you continue to train/update the Caffe model, you would then need to re-run the Model Optimizer to convert/optimize again
+	> The Model Optimizer converts a trained Caffe model to be compatible with the Intel Inference Engine and optimizes it for Intel architecture
+	> These are the files you would include with your C++ application to apply inference to visual data
+	> Note: if you continue to train/update the Caffe model, you would then need to re-run the Model Optimizer to convert/optimize again
 
 #### 3. Verify creation of the optimized model files (the IR files)
 
 	ls
 
->> You should see the following two files listed in this directory: VGG_VOC0712_SSD_300x300_deploy.xml and VGG_VOC0712_SSD_300x300_deploy.bin
+	> You should see the following two files listed in this directory: VGG_VOC0712_SSD_300x300_deploy.xml and VGG_VOC0712_SSD_300x300_deploy.bin
 
 #### 4. Exit super user mode
 
