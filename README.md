@@ -20,12 +20,12 @@
 
 	cd /opt/intel/tutorials/cvsdk_hello_world
 
-#### 4. Download and clone the tutorial content to the current directory (opt/intel/tutorials/cvsdk_hello_world). Four sub-directories are created: models, samples, videos, images
+#### 4. Download and clone the tutorial content to the current directory (opt/intel/tutorials/cvsdk_hello_world).
 
 	git clone https://github.com/hunnel/cvsdk_hello_world.git
 
 
-# Part 1: Optimizing and deploying a deep learning model for pedestrian detection (~15 minutes)
+# Part 1: Optimize and deploy a deep learning model for pedestrian detection (~15 minutes)
 
 
 ## Introduction and learning goals
@@ -46,7 +46,7 @@ The photo below shows an example frame from the inferred video. The red boxes ar
 
 The figure below shows you the full end-to-end computer vision application process. Some of the components shown are not part of the Intel® CV SDK, but are included in the diagram to help illustrate a complete E2E CV process.  
 
-For example, the Intel® CV SDK requires a trained model. The first two columns of the figure cover aquiring a deep-learning model and refining it for your application. If you need to retrain the model after optimization using in the Intel® CV SDK, you will need to return to this part of the process, retrain your model, then re-run the Model Optimizer to generate new .IR files. For this tutorial, a trained model is provided.
+For example, the Intel® CV SDK requires a trained model. The first two columns of the figure cover acquiring a deep-learning model and refining it for your application. If you need to retrain the model after optimization using in the Intel® CV SDK, you will need to return to this part of the process, retrain your model, then re-run the Model Optimizer to generate new .IR files. For this tutorial, a trained model is provided.
 
 After your trained model is completed, you are ready to use the Intel® CV SDK in a developer environment to write an application and optimize its performance on Intel® hardware. During this phase of development you use the Model Optimizer on the pre-trained model. In addition to optimizing your model, you also need to integrate the components within your application by calling the .IR files and the Inference Engine. Depending on your specific needs, you may also utilize other Intel® tools, like the Intel® Media SDK, in your application.
 
@@ -56,7 +56,7 @@ Once you have used the Model Optimizer and integrated the applicable components,
 
 In the figure:
 - The light blue boxes are the focus of this tutorial.
-- The dark gray boxes are column headings to show where the work happpens.
+- The dark gray boxes are column headings to show where the work happens.
 - The light gray boxes shows the overall part of the process accomplished by each column.
 - The white boxes are not addressed by this tutorial.
 - The blue text tells you which piece of software is needed to perform the action in the box, whether or not they are addressed by this tutorial.
@@ -74,9 +74,9 @@ This video in this tutorial prepares you for more difficult deep learning scenar
 
 ## Optimize a deep-learning model using the Model Optimizer (MO)
 
-#### 1. Go to the sample application directory
+#### 1. Navigate to the sample directory
 
-	cd /opt/intel/tutorials/cvsdk/samples/ped_detection
+	cd /opt/intel/tutorials/cvsdk_hello_world/samples/
 
 #### 2. Run the Model Optimizer on the trained Caffe* model. This step generates one .xml file and one .bin file, both in the directory  <current_dir>/artifacts
 
@@ -84,13 +84,15 @@ This video in this tutorial prepares you for more difficult deep learning scenar
 	```source /opt/intel/computer_vision_sdk_2017.1.163/bin/setupvars.sh```
 	```python runMO.py -w SSD_GoogleNetV2_caffe/SSD_GoogleNetV2.caffemodel -d SSD_GoogleNetV2_caffe/SSD_GoogleNetV2_Deploy.prototxt```
 
-> The Model Optimizer converts a trained Caffe model to be compatible with the Intel Inference Engine and optimizes it for Intel
-architecture
+> The Model Optimizer converts a trained Caffe model to be compatible with the Intel Inference Engine and optimizes it for Intel architecture
 > These are the files you would include with your C++ application to apply inference to visual data
-> Note: if you continue to train/update the Caffe model, you would then need to re-run the Model Optimizer to convert/optimize
-again
+> Note: if you continue to train/update the Caffe model, you would then need to re-run the Model Optimizer to convert/optimize again
 
 #### 3. Verify creation of the optimized model files (the IR files)
+
+	ls
+
+> You should see the following two files listed in this directory: VGG_VOC0712_SSD_300x300_deploy.xml and VGG_VOC0712_SSD_300x300_deploy.bin
 
 #### 4. Exit super user mode
 
@@ -132,46 +134,6 @@ see the output in the console showing the objects found and the confidence level
 - Running an application that uses the Inference Engine with a video to accomplish a task, in this case, identifying pedestrians.
 - Modifying Inference Engine parameters.
 
-
-# Part 2: Re-purpose a Pedestrian Detection application to identify cars (~10 minutes)
-
-
-## Introduction and learning goals
-
-#### 1. What you’re about to learn and why it is important
-
-In Part 1 of this tutorial series, you used the Inference Engine to identify parameters by putting a bounding box around each person. In this tutorial, you will build on your Intel CV SDK skills by using the same sample source code to identify cars.
-
-#### 2. Provide an example of what success looks like in this module
-
-> Show a side-by-side comparison of the pedestrian video clip: original vs with bounding boxes
-
-#### 3. Conceptual diagram: E2E video application developer journey map
-
-> (continue to show this throughout the module as it changes? i.e. ‘you are here’)
-
-## Update the pedestrian detection application code to target cars instead of people
-
-#### 1. Navigate to the sample application directory (cd opt/intel/tutorials/cvsdk/samples)
-#### 2. Create a copy of the ped_detection folder and name the new directory car_detection (cp -r ped_detection car_
-detection)
-#### 3. Open the object detection sample app source code to view the lines that call the IR.
-#### 4. *David to define the steps to update the app*
-#### 5. Save and close the source file.
-#### 6. Build the sample application.
-#### 7. Run the updated sample application to call the Inference Engine.
-
-./IEobjectdetection -i opt/intel/tutorials/cvsdk/videos/vtest.avi -fr 200 -m artifacts/VGG_VOC0712_SSD_300x300_deploy/VGG_
-VOC0712_SSD_300x300_deploy.xml -d CPU -l pascal_voc_classes.txt
-
-## \(Optional) Explore using different parameters to see how they affect the results
-
-#### 1. *define suggested activities here and describe what should happen/what it means*
-
-## Part 2 recap
-
-#### 1. *Provide a quick recap of what you did and why you care*
-#### 2. *link to the next logical tutorial(s) in the learning path*
 
 ## Additional resources
 
