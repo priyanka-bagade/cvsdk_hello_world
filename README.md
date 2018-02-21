@@ -118,10 +118,10 @@ You should see the following two files listed in this directory: **VGG_VOC0712_S
 
 #### 1. Open the sample app source code to view the lines that call the Inference Engine.
 <ul><ul>
-	<li> Line 39 adds the Inference Engine plugin to your application
-	<li> Line 107 sets the confidence threshold for object detection
-	<li> Lines 382-404 load the Inference Engine plugin for use within the application
-	<li> Lines 506-515 load the model file into the Inference Engine plug-in
+	<li> **Line 39** adds the Inference Engine plugin to your application
+	<li> **Line 107** sets the confidence threshold for object detection
+	<li> **Lines 382-404** load the Inference Engine plugin for use within the application
+	<li> **Lines 506-515** load the model file into the Inference Engine plug-in
 </ul></ul>
 
 #### 2. Close the source file
@@ -139,7 +139,7 @@ The below command runs the application using the following parameters:
 		<li> data labels list location (-l)
 	</ul></ul>
 
-	```./IEobjectdetection -i opt/intel/tutorials/cvsdk/videos/vtest.avi -fr 200 -m artifacts/VGG_VOC0712_SSD_300x300_deploy/VGG_VOC0712_SSD_300x300_deploy.xml -d CPU -l pascal_voc_classes.txt```
+	./IEobjectdetection -i opt/intel/tutorials/cvsdk/videos/vtest.avi -fr 200 -m artifacts/VGG_VOC0712_SSD_300x300_deploy/VGG_VOC0712_SSD_300x300_deploy.xml -d CPU -l pascal_voc_classes.txt
 
 
 You should see a video play with people walking across and red bounding boxes around them. You should also see the output in the console showing the objects found and the confidence level. The higher the confidence level, the more likely the model is correctly identifying and drawing bounding boxes around pedestrians in the video. (for example: 0.83 is more confident than 0.23)
