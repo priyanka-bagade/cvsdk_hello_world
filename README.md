@@ -68,7 +68,7 @@ This video in this tutorial prepares you for more difficult deep learning scenar
 - Triggering an action if Inference detects someone entering an environment. For example, a homeowner might want to be alerted if a person walks onto their property, but not an animal.
 - Comparing the number of people leaving an environment to the number of people who entered the environment. For example, a store might want to be alerted at closing time that someone might still be on the premises.
 
-
+***
    
 ### Optimize a deep-learning model using the Model Optimizer (MO)
 
@@ -96,7 +96,7 @@ This video in this tutorial prepares you for more difficult deep learning scenar
 
 	exit
 
-
+***
    
 ### Use the optimized models and Inference Engine in a pedestrian detection application
 
@@ -124,6 +124,7 @@ see the output in the console showing the objects found and the confidence level
 
 #### 1. *define some suggested activities here and describe what should happen/what it means*
 
+***
    
 ### Recap
 
@@ -137,6 +138,7 @@ Key takeaways from this tutorial:
 ### Next Steps
 
 [Hello World | Part 2: Re-purpose a Pedestrian Detection application to identify cars (coming soon)](https://)
+
 
    
 ### Additional resources
