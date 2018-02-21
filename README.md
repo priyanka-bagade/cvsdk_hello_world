@@ -1,14 +1,11 @@
 # Intel® Computer Vision SDK | Hello World Tutorial
 
-
-### Prerequisite checklist
+## Prerequisite checklist
 - [ ] [Verify hardware compatibility](https://software.intel.com/en-us/computer-vision-sdk?cid=sem43700020075377675&intel_term=computer+vision+sdk&gclid=CjwKCAiA9f7QBRBpEiwApLGUit1KXgtbu46anzhcsxJVBltKW-JOxPzucCmBxVDZwI_1H4FYgQZ-3RoC96sQAvD_BwE&gclsrc=aw.ds)
 - [ ] [Install OpenCL® and other dependencies](https://software.intel.com/en-us/articles/opencl-drivers)
 - [ ] [Install the Intel® CV SDK and set environment variables](https://software.intel.com/en-us/cvsdk-installguide-installing-on-linux-os)
 
-<br>
-
-### Install the Hello World tutorial support files (models, videos, images, sample apps)
+## Install the Hello World tutorial support files (models, videos, images, sample apps)
 
 #### 1. Create the tutorial directory
 
@@ -27,6 +24,7 @@
 	git clone https://github.com/hunnel/cvsdk_hello_world.git
 
 <br>
+
 ## Part 1: Optimize and deploy a deep learning model for pedestrian detection (~15 minutes)
 
 ### What you’re about to learn
@@ -62,6 +60,8 @@ Once you have used the Model Optimizer and integrated the applicable components,
 - The white boxes are not directly addressed by this tutorial.
 - The blue text shows which piece of Intel® software performs the action in the box, whether or not they are addressed by this tutorial.
 
+<br>
+
 ### Why this tutorial is important for you
 
 Deep learning is a complex process. To be successful at optimizing and deploying your own models, it is necessary to understand the process flow of moving from a trained model to an executable application. The illustration above gives you an overview of the process flow, and the steps in the tutorial reinforce selected steps in this process.
@@ -75,7 +75,7 @@ This video in this tutorial prepares you for more difficult deep learning scenar
 
 ***
    
-### Optimize a deep-learning model using the Model Optimizer (MO)
+## Optimize a deep-learning model using the Model Optimizer (MO)
 
 <br>
 
@@ -109,7 +109,7 @@ This video in this tutorial prepares you for more difficult deep learning scenar
 
 <br>
 
-### Use the optimized models and Inference Engine in a pedestrian detection application
+## Use the optimized models and Inference Engine in a pedestrian detection application
 
 #### 1. Open the sample app source code to view the lines that call the Inference Engine.
 
@@ -143,7 +143,7 @@ see the output in the console showing the objects found and the confidence level
 
 <br>
    
-### Recap
+## Recap
 
 Key takeaways from this tutorial:
 - How to run the Model Optimizer against a trained Caffe model to create the optimized .IR files.
@@ -151,14 +151,15 @@ Key takeaways from this tutorial:
 - How to run a CV application using the optimized model and Inference Engine to analyze video data and apply application logic, in this case, identifying pedestrians.
 - Explore and modify application parameters to achieve various results.
 
-   
-### Next Steps
+<br>
+
+## Next Steps
 
 [Hello World | Part 2: Re-purpose a Pedestrian Detection application to identify cars (coming soon)](https://)
 
-
+<br>
    
-### Additional resources
+## Additional resources
 
 - [CV SDK developer portal (IDZ)](https://software.intel.com/en-us/computer-vision-sdk?cid=sem43700020075377675&intel_term=computer+vision+sdk&gclid=CjwKCAiA9f7QBRBpEiwApLGUit1KXgtbu46anzhcsxJVBltKW-JOxPzucCmBxVDZwI_1H4FYgQZ-3RoC96sQAvD_BwE&gclsrc=aw.ds)
 - [Developer guide](https://software.intel.com/en-us/cvsdk-inference-engine-apiref)
