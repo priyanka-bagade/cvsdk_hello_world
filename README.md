@@ -5,7 +5,9 @@
 - [ ] [Install OpenCL® and other dependencies](https://software.intel.com/en-us/articles/opencl-drivers)
 - [ ] [Install the Intel® CV SDK and set environment variables](https://software.intel.com/en-us/cvsdk-installguide-installing-on-linux-os)
 
-## Install the Hello World tutorial support files (models, videos, images, sample apps)
+<br>
+
+## Install the tutorial support files
 
 #### 1. Create the tutorial directory
 
@@ -72,6 +74,8 @@ This video in this tutorial prepares you for more difficult deep learning scenar
 - Comparing the number of people leaving an environment to the number of people who entered the environment. For example, a store might want to be alerted at closing time that someone might still be on the premises.
 
 <br>
+<br>
+
 
 ***
    
@@ -97,7 +101,7 @@ This video in this tutorial prepares you for more difficult deep learning scenar
 
 	ls
 
-> You should see the following two files listed in this directory: VGG_VOC0712_SSD_300x300_deploy.xml and VGG_VOC0712_SSD_300x300_deploy.bin
+>> You should see the following two files listed in this directory: VGG_VOC0712_SSD_300x300_deploy.xml and VGG_VOC0712_SSD_300x300_deploy.bin
 
 #### 4. Exit super user mode
 
