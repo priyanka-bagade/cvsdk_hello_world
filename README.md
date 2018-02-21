@@ -167,5 +167,17 @@ Key takeaways from this tutorial:
    
 ## Additional resources
 
-- [CV SDK developer portal (IDZ)](https://software.intel.com/en-us/computer-vision-sdk?cid=sem43700020075377675&intel_term=computer+vision+sdk&gclid=CjwKCAiA9f7QBRBpEiwApLGUit1KXgtbu46anzhcsxJVBltKW-JOxPzucCmBxVDZwI_1H4FYgQZ-3RoC96sQAvD_BwE&gclsrc=aw.ds)
-- [Developer guide](https://software.intel.com/en-us/cvsdk-inference-en
+- [CV SDK landing page (IDZ)](https://software.intel.com/en-us/computer-vision-sdk?cid=sem43700020075377675&intel_term=computer+vision+sdk&gclid=CjwKCAiA9f7QBRBpEiwApLGUit1KXgtbu46anzhcsxJVBltKW-JOxPzucCmBxVDZwI_1H4FYgQZ-3RoC96sQAvD_BwE&gclsrc=aw.ds)
+- [Developer guide](https://software.intel.com/en-us/cvsdk-inference-engine-apiref)
+- [API references](https://software.intel.com/en-us/inference-engine-devguide)
+
+<br>
+<br>
+
+***
+
+<br>
+
+> OpenCL is a trademark of Apple Inc. used by permission by Khronos
+> Intel is a registered trademark of Intel Corporation
+> `*` Other brands and names may be the property of others
