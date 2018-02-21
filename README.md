@@ -126,7 +126,7 @@ see the output in the console showing the objects found and the confidence level
 
 ## Recap
 
-What this tutorial covered:
+Key takeaways from this tutorial:
 - How to run the Model Optimizer against a trained Caffe model to create the optimized .IR files.
 - How to call the .IR files and Inference Engine from an application.
 - How to run a CV application using the optimized model and Inference Engine to analyze video data and apply application logic, in this case, identifying pedestrians.
