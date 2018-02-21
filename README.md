@@ -118,9 +118,10 @@ You should see the following two files listed in this directory: **VGG_VOC0712_S
 
 #### 1. Open the sample app source code to view the lines that call the Inference Engine.
 <ul><ul>
-	<li> Lines x through x call the Inference Engine
-	<li> Lines x through x reference the optimized model files (**VGG_VOC0712_SSD_300x300_deploy.xml** and **VGG_VOC0712_SSD_300x300_deploy.bin**)
-	<li> Lines x through x define the confidence interval and...
+	<li> Line 39 adds the Inference Engine plugin to your application
+	<li> Line 107 sets the confidence threshold for object detection
+	<li> Lines 382-404 load the Inference Engine plugin for use within the application
+	<li> Lines 506-515 load the model file into the Inference Engine plug-in
 </ul></ul>
 
 #### 2. Close the source file
