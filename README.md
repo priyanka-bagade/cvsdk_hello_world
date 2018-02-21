@@ -92,7 +92,7 @@ This video in this tutorial prepares you for more difficult deep learning scenar
 
 	cd /opt/intel/computer_vision_sdk_2018.0.182/deployment_tools/model_optimizer
 
-#### 2. Run the Model Optimizer on the pretrained Caffe* model. This step generates one .xml file and one .bin file, both in the tutorial samples directory /opt/intel/tutorials/cvsdk/cvsdk_hello_world/samples/artifacts
+#### 2. Run the Model Optimizer on the pretrained Caffe* model. This step generates one .xml file and one .bin file and place both files in the tutorial samples directory (located here: /opt/intel/tutorials/cvsdk/cvsdk_hello_world/samples/artifacts)
 
 	sudo apt install python3-pip
 	pip3 install -r requirements_caffe.txt 
@@ -102,7 +102,11 @@ The Model Optimizer converts a pretrained Caffe model to be compatible with the 
 	
 > **Note:** if you continue to train or make changes to the Caffe model, you would then need to re-run the Model Optimizer on the updated model.
 
-#### 3. Verify creation of the optimized model files (the IR files)
+#### 3. Navigate to the tutorial sample directory
+
+	cd /opt/intel/tutorials/cvsdk_hello_world
+
+#### 4. Verify creation of the optimized model files (the IR files)
 
 	ls
 
@@ -113,11 +117,8 @@ You should see the following two files listed in this directory: **SSD_GoogleNet
 
 ## Use the optimized models and Inference Engine in a pedestrian detection application
 
-#### 1. Navigate to the tutorial sample directory
 
-	cd /opt/intel/tutorials/cvsdk_hello_world
-
-#### 2. Open the sample app source code to view the lines that call the Inference Engine.
+#### 1. Open the sample app source code to view the lines that call the Inference Engine.
 <ul><ul>
 	<li> Line 39 &#8212; adds the Inference Engine plugin to your application
 	<li> Line 107 &#8212; sets the confidence threshold for object detection
@@ -125,13 +126,13 @@ You should see the following two files listed in this directory: **SSD_GoogleNet
 	<li> Lines 506-515 &#8212; loads the model file into the Inference Engine plug-in
 </ul></ul>
 
-#### 3. Close the source file
+#### 2. Close the source file
 
-#### 4. Build the sample application
+#### 3. Build the sample application
 
  	make
 
-#### 5. Run the pedestrian detection sample application to use the Inference Engine on a video
+#### 4. Run the pedestrian detection sample application to use the Inference Engine on a video
 The below command runs the application using the following parameters: 
 <ul><ul>
 		<li> number of frames to process (-fr)
