@@ -1,12 +1,12 @@
-# Intel® Computer Vision SDK | Hello World Tutorial
+## Intel® Computer Vision SDK | Hello World Tutorial
 
 
-## Prerequisite checklist
+### Prerequisite checklist
 - [ ] [Verify hardware compatibility](https://software.intel.com/en-us/computer-vision-sdk?cid=sem43700020075377675&intel_term=computer+vision+sdk&gclid=CjwKCAiA9f7QBRBpEiwApLGUit1KXgtbu46anzhcsxJVBltKW-JOxPzucCmBxVDZwI_1H4FYgQZ-3RoC96sQAvD_BwE&gclsrc=aw.ds)
 - [ ] [Install OpenCL® and other dependencies](https://software.intel.com/en-us/articles/opencl-drivers)
 - [ ] [Install the Intel® CV SDK and set environment variables](https://software.intel.com/en-us/cvsdk-installguide-installing-on-linux-os)
 
-## Install the Hello World tutorial support files (models, videos, images, sample apps)
+### Install the Hello World tutorial support files (models, videos, images, sample apps)
 
 #### 1. Create the tutorial directory
 
@@ -25,7 +25,7 @@
 	git clone https://github.com/hunnel/cvsdk_hello_world.git
 
 
-# Part 1: Optimize and deploy a deep learning model for pedestrian detection (~15 minutes)
+## Part 1: Optimize and deploy a deep learning model for pedestrian detection (~15 minutes)
 
 
 ## Introduction and learning goals
