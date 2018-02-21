@@ -96,7 +96,7 @@ This video in this tutorial prepares you for more difficult deep learning scenar
 
 The Model Optimizer converts a trained Caffe model to be compatible with the Intel Inference Engine and optimizes it for Intel architecture. These are the files you would include with your C++ application to apply inference to visual data.
 	
-> Note: if you continue to train/update the Caffe model, you would then need to re-run the Model Optimizer on the updated model.
+> **Note:** if you continue to train/update the Caffe model, you would then need to re-run the Model Optimizer on the updated model.
 
 #### 3. Verify creation of the optimized model files (the IR files)
 
@@ -158,7 +158,7 @@ You should see a video play with people walking across and red bounding boxes ar
    
 ## Recap
 
-Key takeaways from this tutorial:
+**Key takeaways from this tutorial:**
 - How to run the Model Optimizer against a trained Caffe model to create the optimized .IR files.
 - How to call the .IR files and Inference Engine from an application.
 - How to run a CV application using the optimized model and Inference Engine to analyze video data and apply application logic, in this case, identifying pedestrians.
