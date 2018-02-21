@@ -7,8 +7,6 @@
 - [ ] [Install the Intel® CV SDK and set environment variables](https://software.intel.com/en-us/cvsdk-installguide-installing-on-linux-os)
 
 <br>
-<br>
-<br>
 
 ### Install the Hello World tutorial support files (models, videos, images, sample apps)
 
@@ -28,9 +26,8 @@
 
 	git clone https://github.com/hunnel/cvsdk_hello_world.git
 
-
+<br>
 ## Part 1: Optimize and deploy a deep learning model for pedestrian detection (~15 minutes)
-
 
 ### What you’re about to learn
 
@@ -44,6 +41,8 @@ The photo below shows an example frame from the inferred video. The red boxes ar
 
 ![alt text](https://github.com/hunnel/cvsdk_hello_world/blob/master/images/1-obj_detect_ped_demo_3.jpg "pedestrian detection success")
 
+<br>
+
 ### Overview of an end-to-end Computer Vision Application
 
 The figure below shows you the full end-to-end computer vision application process. Some of the components shown are not part of the Intel® CV SDK, but are included in the diagram to help illustrate a complete E2E CV process.  
@@ -56,7 +55,7 @@ Once you have used the Model Optimizer and integrated the applicable components,
 
 ![alt text](https://github.com/hunnel/cvsdk_hello_world/blob/master/images/e2e_cv_diagram.png "End-to-end computer vision workflow")
 
-In the figure:
+**In the figure:**
 - The blue boxes highlight the focus of this tutorial.
 - The dark gray boxes are column headings to show where the work happens.
 - The light gray boxes shows the overall part of the process accomplished by each column.
@@ -72,9 +71,13 @@ This video in this tutorial prepares you for more difficult deep learning scenar
 - Triggering an action if Inference detects someone entering an environment. For example, a homeowner might want to be alerted if a person walks onto their property, but not an animal.
 - Comparing the number of people leaving an environment to the number of people who entered the environment. For example, a store might want to be alerted at closing time that someone might still be on the premises.
 
+<br>
+
 ***
    
 ### Optimize a deep-learning model using the Model Optimizer (MO)
+
+<br>
 
 #### 1. Navigate to the sample directory
 
@@ -100,8 +103,12 @@ This video in this tutorial prepares you for more difficult deep learning scenar
 
 	exit
 
+<br>
+
 ***
-   
+
+<br>
+
 ### Use the optimized models and Inference Engine in a pedestrian detection application
 
 #### 1. Open the sample app source code to view the lines that call the Inference Engine.
@@ -124,11 +131,17 @@ This video in this tutorial prepares you for more difficult deep learning scenar
 > You should see a video play with people walking across and red bounding boxes around them. You should also
 see the output in the console showing the objects found and the confidence level. The higher the confidence level, the more likely the model is correctly identifying and drawing bounding boxes around pedestrians in the video. (for example: 0.83 is more confident than 0.23)
 
+<br>
+
 ### \(Optional) Explore using different parameters to see how they affect the results
 
 #### 1. *define some suggested activities here and describe what should happen/what it means*
 
+<br>
+
 ***
+
+<br>
    
 ### Recap
 
@@ -151,7 +164,8 @@ Key takeaways from this tutorial:
 - [Developer guide](https://software.intel.com/en-us/cvsdk-inference-engine-apiref)
 - [API references](https://software.intel.com/en-us/inference-engine-devguide)
 
-   
+<br>
+
 ***
 
 ###### OpenCL is a trademark of Apple Inc. used by permission by Khronos
