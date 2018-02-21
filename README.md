@@ -114,10 +114,11 @@ This video in this tutorial prepares you for more difficult deep learning scenar
 ## Use the optimized models and Inference Engine in a pedestrian detection application
 
 #### 1. Open the sample app source code to view the lines that call the Inference Engine.
-
-Lines x through x call the Inference Engine
-Lines x through x reference the optimized model files (**VGG_VOC0712_SSD_300x300_deploy.xml** and **VGG_VOC0712_SSD_300x300_deploy.bin**)
-Lines x through x define the confidence interval and...
+<ul>
+	<li> Lines x through x call the Inference Engine
+	<li> Lines x through x reference the optimized model files (**VGG_VOC0712_SSD_300x300_deploy.xml** and **VGG_VOC0712_SSD_300x300_deploy.bin**)
+	<li> Lines x through x define the confidence interval and...
+</ul>
 
 #### 2. Close the source file
 
@@ -126,12 +127,12 @@ Lines x through x define the confidence interval and...
  	make
 
 #### 4. Run the pedestrian detection sample application to use the Inference Engine on a video
-*The below command runs the application using the following parameters in the application:
-	- number of frames from the video to process (-fr)
-	- location of the optimized deep-learning model (-m)
-	- target device (CPU or GPU) to be used for inference (-d)
-	- data labels list location (-l)*
-
+<ul>*The below command runs the application using the following parameters in the application:
+	<li> - number of frames from the video to process (-fr)
+	<li> - location of the optimized deep-learning model (-m)
+	<li> - target device (CPU or GPU) to be used for inference (-d)
+	<li> - data labels list location (-l)*
+</ul>
 	./IEobjectdetection -i opt/intel/tutorials/cvsdk/videos/vtest.avi -fr 200 -m artifacts/VGG_VOC0712_SSD_300x300_deploy/VGG_VOC0712_SSD_300x300_deploy.xml -d CPU -l pascal_voc_classes.txt
 
 > You should see a video play with people walking across and red bounding boxes around them. You should also
