@@ -138,10 +138,9 @@ The below command runs the application using the following parameters:
 	```./IEobjectdetection -i opt/intel/tutorials/cvsdk/videos/vtest.avi -fr 200 -m artifacts/VGG_VOC0712_SSD_300x300_deploy/VGG_VOC0712_SSD_300x300_deploy.xml -d CPU -l pascal_voc_classes.txt```
 
 
-You should see a video play with people walking across and red bounding boxes around them. You should also
-see the output in the console showing the objects found and the confidence level. The higher the confidence level, the more likely the model is correctly identifying and drawing bounding boxes around pedestrians in the video. (for example: 0.83 is more confident than 0.23)
+You should see a video play with people walking across and red bounding boxes around them. You should also see the output in the console showing the objects found and the confidence level. The higher the confidence level, the more likely the model is correctly identifying and drawing bounding boxes around pedestrians in the video. (for example: 0.83 is more confident than 0.23)
 
-##### *Note: If you get an error related to "undefined reference to 'google::FlagRegisterer...", try uninstalling libgflags-dev: sudo apt-get remove libgflags-dev*
+> **Note:** If you get an error related to "undefined reference to 'google::FlagRegisterer...", try uninstalling libgflags-dev: sudo apt-get remove libgflags-dev*
 
 <br>
 
@@ -186,6 +185,7 @@ Key takeaways from this tutorial:
 
 <br>
 
-OpenCL is a trademark of Apple Inc. used by permission by Khronos   
-Intel is a registered trademark of Intel Corporation   
-&ast; Other brands and names may be the property of others
+
+###### OpenCL is a trademark of Apple Inc. used by permission by Khronos   
+###### Intel is a registered trademark of Intel Corporation 
+###### &ast;Other brands and names may be the property of others
