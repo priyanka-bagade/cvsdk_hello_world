@@ -6,6 +6,10 @@
 - [ ] [Install OpenCL® and other dependencies](https://software.intel.com/en-us/articles/opencl-drivers)
 - [ ] [Install the Intel® CV SDK and set environment variables](https://software.intel.com/en-us/cvsdk-installguide-installing-on-linux-os)
 
+<br>
+<br>
+<br>
+
 ### Install the Hello World tutorial support files (models, videos, images, sample apps)
 
 #### 1. Create the tutorial directory
