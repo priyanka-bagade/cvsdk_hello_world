@@ -45,7 +45,7 @@ The photo below shows an example frame from the inferred video. The red boxes ar
 
 <br>
 
-![image of video data before and after inference](https://github.com/hunnel/cvsdk_hello_world/blob/master/images/obj_detect_ped_demo_before_and_after.png "pedestrian detection success")
+![image of video data before and after inference](https://i.imgur.com/pqPjMdS.png)
 
 <br>
 
