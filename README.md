@@ -142,6 +142,4 @@ What this tutorial covered:
 - [Developer guide](https://software.intel.com/en-us/cvsdk-inference-engine-apiref)
 - [API references](https://software.intel.com/en-us/inference-engine-devguide)
 
-###### OpenCL is a trademark of Apple Inc. used by permission by Khronos
-###### Intel is a registered trademark of Intel Corporation
-###### * Other brands and names may be the property of others
+###### OpenCL is a trademark of Apple Inc. used by permission by Khronos   Intel is a registered trademark of Intel Corporation   * Other brands and names may be the property of others
