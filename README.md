@@ -144,8 +144,8 @@ What this tutorial covered:
 
 ***
 
-OpenCL is a trademark of Apple Inc. used by permission by Khronos
+###### OpenCL is a trademark of Apple Inc. used by permission by Khronos
 
-Intel is a registered trademark of Intel Corporation
+###### Intel is a registered trademark of Intel Corporation
 
-(*) Other brands and names may be the property of others
+###### (*) Other brands and names may be the property of others
