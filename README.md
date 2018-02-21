@@ -2,14 +2,14 @@
 
 <br>
 
-## Prerequisite checklist
+### Prerequisite checklist
 - [ ] [Verify hardware compatibility](https://software.intel.com/en-us/computer-vision-sdk?cid=sem43700020075377675&intel_term=computer+vision+sdk&gclid=CjwKCAiA9f7QBRBpEiwApLGUit1KXgtbu46anzhcsxJVBltKW-JOxPzucCmBxVDZwI_1H4FYgQZ-3RoC96sQAvD_BwE&gclsrc=aw.ds)
 - [ ] [Install OpenCL® and other dependencies](https://software.intel.com/en-us/articles/opencl-drivers)
 - [ ] [Install the Intel® CV SDK and set environment variables](https://software.intel.com/en-us/cvsdk-installguide-installing-on-linux-os)
 
 <br>
 
-## Install the tutorial support files
+### Install the tutorial support files
 
 #### 1. Create the tutorial directory
 
@@ -83,8 +83,6 @@ This video in this tutorial prepares you for more difficult deep learning scenar
 <br>
 
 ## Optimize a deep-learning model using the Model Optimizer (MO)
-
-<br>
 
 #### 1. Navigate to the sample directory
 
@@ -168,16 +166,4 @@ Key takeaways from this tutorial:
 ## Additional resources
 
 - [CV SDK developer portal (IDZ)](https://software.intel.com/en-us/computer-vision-sdk?cid=sem43700020075377675&intel_term=computer+vision+sdk&gclid=CjwKCAiA9f7QBRBpEiwApLGUit1KXgtbu46anzhcsxJVBltKW-JOxPzucCmBxVDZwI_1H4FYgQZ-3RoC96sQAvD_BwE&gclsrc=aw.ds)
-- [Developer guide](https://software.intel.com/en-us/cvsdk-inference-engine-apiref)
-- [API references](https://software.intel.com/en-us/inference-engine-devguide)
-
-<br>
-<br>
-
-***
-
-###### OpenCL is a trademark of Apple Inc. used by permission by Khronos
-
-###### Intel is a registered trademark of Intel Corporation
-
-###### (*) Other brands and names may be the property of others
+- [Developer guide](https://software.intel.com/en-us/cvsdk-inference-en
