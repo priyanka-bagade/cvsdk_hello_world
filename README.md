@@ -121,8 +121,8 @@ You should see the following two files listed in this directory: **VGG_VOC0712_S
 <ul><ul>
 	<li> Line 39 &#8212; adds the Inference Engine plugin to your application
 	<li> Line 107 &#8212; sets the confidence threshold for object detection
-	<li> Lines 382-404 &#8212; load the Inference Engine plugin for use within the application
-	<li> Lines 506-515 &#8212; load the model file into the Inference Engine plug-in
+	<li> Lines 382-404 &#8212; loads the Inference Engine plugin for use within the application
+	<li> Lines 506-515 &#8212; loads the model file into the Inference Engine plug-in
 </ul></ul>
 
 #### 2. Close the source file
