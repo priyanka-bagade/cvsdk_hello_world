@@ -92,7 +92,7 @@ This video in this tutorial prepares you for more difficult deep learning scenar
 
 	cd /opt/intel/computer_vision_sdk_2018.0.182/deployment_tools/model_optimizer
 
-#### 2. Run the Model Optimizer on the pretrained Caffe* model. This step generates one .xml file and one .bin file, both in the directory  <current_dir>/artifacts
+#### 2. Run the Model Optimizer on the pretrained Caffe* model. This step generates one .xml file and one .bin file, both in the tutorial samples directory /opt/intel/tutorials/cvsdk/cvsdk_hello_world/samples/artifacts
 
 	sudo apt install python3-pip
 	pip3 install -r requirements_caffe.txt 
@@ -113,7 +113,11 @@ You should see the following two files listed in this directory: **SSD_GoogleNet
 
 ## Use the optimized models and Inference Engine in a pedestrian detection application
 
-#### 1. Open the sample app source code to view the lines that call the Inference Engine.
+#### 1. Navigate to the tutorial sample directory
+
+	cd /opt/intel/tutorials/cvsdk_hello_world
+
+#### 2. Open the sample app source code to view the lines that call the Inference Engine.
 <ul><ul>
 	<li> Line 39 &#8212; adds the Inference Engine plugin to your application
 	<li> Line 107 &#8212; sets the confidence threshold for object detection
@@ -121,13 +125,13 @@ You should see the following two files listed in this directory: **SSD_GoogleNet
 	<li> Lines 506-515 &#8212; loads the model file into the Inference Engine plug-in
 </ul></ul>
 
-#### 2. Close the source file
+#### 3. Close the source file
 
-#### 3. Build the sample application
+#### 4. Build the sample application
 
  	make
 
-#### 4. Run the pedestrian detection sample application to use the Inference Engine on a video
+#### 5. Run the pedestrian detection sample application to use the Inference Engine on a video
 The below command runs the application using the following parameters: 
 <ul><ul>
 		<li> number of frames to process (-fr)
