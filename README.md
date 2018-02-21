@@ -88,15 +88,15 @@ This video in this tutorial prepares you for more difficult deep learning scenar
 
 ## Optimize a deep-learning model using the Model Optimizer (MO)
 
-#### 1. Navigate to the sample directory
+#### 1. Navigate to the cv-sdk directory
 
-	cd /opt/intel/tutorials/cvsdk_hello_world/samples/
+	cd /opt/intel/computer_vision_sdk_2018.0.182/deployment_tools/model_optimizer
 
 #### 2. Run the Model Optimizer on the pretrained Caffe* model. This step generates one .xml file and one .bin file, both in the directory  <current_dir>/artifacts
 
-	sudo su
-	source /opt/intel/computer_vision_sdk_2017.1.163/bin/setupvars.sh
-	python runMO.py -w SSD_GoogleNetV2_caffe/SSD_GoogleNetV2.caffemodel -d SSD_GoogleNetV2_caffe/SSD_GoogleNetV2_Deploy.prototxt
+	sudo apt install python3-pip
+	pip3 install -r requirements_caffe.txt 
+	python3 mo_caffe.py --input_model /opt/intel/tutorials/cvsdk/cvsdk_hello_world/samples/SSD_GoogleNetV2.caffemodel -o /opt/intel/tutorials/cvsdk/cvsdk_hello_world/samples/
 
 The Model Optimizer converts a pretrained Caffe model to be compatible with the Intel Inference Engine and optimizes it for Intel architecture. These are the files you would include with your C++ application to apply inference to visual data.
 	
@@ -106,11 +106,7 @@ The Model Optimizer converts a pretrained Caffe model to be compatible with the 
 
 	ls
 
-You should see the following two files listed in this directory: **VGG_VOC0712_SSD_300x300_deploy.xml** and **VGG_VOC0712_SSD_300x300_deploy.bin**
-
-#### 4. Exit super user mode
-
-	exit
+You should see the following two files listed in this directory: **SSD_GoogleNetV2.xml** and **SSD_GoogleNetV2.bin**
 
 <br>
 <br>
