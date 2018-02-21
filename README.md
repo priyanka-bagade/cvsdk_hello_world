@@ -127,14 +127,13 @@ You should see the following two files listed in this directory: **VGG_VOC0712_S
  	make
 
 #### 4. Run the pedestrian detection sample application to use the Inference Engine on a video
-<ul>The below command runs the application using the following parameters:
-	<ul>
+The below command runs the application using the following parameters:
+	<ul><ul>
 		<li> number of frames from the video to process (-fr)
 		<li> location of the optimized deep-learning model (-m)
 		<li> target device (CPU or GPU) to be used for inference (-d)
 		<li> data labels list location (-l)
-	</ul>
-</ul>
+	</ul></ul>
 
 	```./IEobjectdetection -i opt/intel/tutorials/cvsdk/videos/vtest.avi -fr 200 -m artifacts/VGG_VOC0712_SSD_300x300_deploy/VGG_VOC0712_SSD_300x300_deploy.xml -d CPU -l pascal_voc_classes.txt```
 
