@@ -84,29 +84,26 @@ This video in this tutorial prepares you for more difficult deep learning scenar
 
 ## Optimize a deep-learning model using the Model Optimizer (MO)
 
-#### 1. Navigate to the sample directory
+#### 1. Navigate to the cv-sdk model optimizer directory
 
-	cd /opt/intel/tutorials/cvsdk_hello_world/samples/
+	cd /opt/intel/computer_vision_sdk_2018.0.182/deployment_tools/model_optimizer
+	
 
 #### 2. Run the Model Optimizer on the trained Caffe* model. This step generates one .xml file and one .bin file, both in the directory  <current_dir>/artifacts
 
-	```sudo su```
-	```source /opt/intel/computer_vision_sdk_2017.1.163/bin/setupvars.sh```
-	```python runMO.py -w SSD_GoogleNetV2_caffe/SSD_GoogleNetV2.caffemodel -d SSD_GoogleNetV2_caffe/SSD_GoogleNetV2_Deploy.prototxt```
+	sudo apt install python3-pip
+	pip3 install -r requirements_caffe.txt 
+ 	python3 mo_caffe.py --input_model /opt/intel/tutorials/cvsdk/cvsdk_hello_world/samples/SSD_GoogleNetV2.caffemodel -o /opt/intel/tutorials/cvsdk/cvsdk_hello_world/samples/
 
-	> The Model Optimizer converts a trained Caffe model to be compatible with the Intel Inference Engine and optimizes it for Intel architecture
-	> These are the files you would include with your C++ application to apply inference to visual data
-	> Note: if you continue to train/update the Caffe model, you would then need to re-run the Model Optimizer to convert/optimize again
+> The Model Optimizer converts a trained Caffe model to be compatible with the Intel Inference Engine and optimizes it for Intel architecture
+> These are the files you would include with your C++ application to apply inference to visual data
+> Note: if you continue to train/update the Caffe model, you would then need to re-run the Model Optimizer to convert/optimize again
 
 #### 3. Verify creation of the optimized model files (the IR files)
 
 	ls
 
-> You should see the following two files listed in this directory: **VGG_VOC0712_SSD_300x300_deploy.xml** and **VGG_VOC0712_SSD_300x300_deploy.bin**
-
-#### 4. Exit super user mode
-
-	exit
+>> You should see the following two files listed in this directory: SSD_GoogleNetV2.xml and SSD_GoogleNetV2.bin
 
 <br>
 <br>
@@ -115,9 +112,7 @@ This video in this tutorial prepares you for more difficult deep learning scenar
 
 #### 1. Open the sample app source code to view the lines that call the Inference Engine.
 
-Lines x through x call the Inference Engine
-Lines x through x reference the optimized model files (**VGG_VOC0712_SSD_300x300_deploy.xml** and **VGG_VOC0712_SSD_300x300_deploy.bin**)
-Lines x through x define the confidence interval and...
+> Explain how the application is calling the inference engine and setting parameters to define what they want to do. Give an example of how this can be changed to achieve different results and mention the related tutorial to learn more.
 
 #### 2. Close the source file
 
