@@ -55,11 +55,11 @@ Once you have used the Model Optimizer and integrated the applicable components,
 ![alt text](https://github.com/hunnel/cvsdk_hello_world/blob/master/images/e2e_cv_diagram.png "End-to-end computer vision workflow")
 
 In the figure:
-- The light blue boxes are the focus of this tutorial.
+- The blue boxes highlight the focus of this tutorial.
 - The dark gray boxes are column headings to show where the work happens.
 - The light gray boxes shows the overall part of the process accomplished by each column.
-- The white boxes are not addressed by this tutorial.
-- The blue text tells you which piece of software is needed to perform the action in the box, whether or not they are addressed by this tutorial.
+- The white boxes are not directly addressed by this tutorial.
+- The blue text shows which piece of Intel® software performs the action in the box, whether or not they are addressed by this tutorial.
 
 #### Why this tutorial is important for you
 
@@ -124,9 +124,9 @@ see the output in the console showing the objects found and the confidence level
 
 #### 1. *define some suggested activities here and describe what should happen/what it means*
 
-## Part 1 recap
+## Recap
 
-> You can now be successful with these tasks:
+You can now be successful with these tasks:
 - Running the Model Optimizer against a trained Cafe model.
 - Identifing the two required Intermediate Representation (IR) files, and their directory location.
 - Locating the source code that runs the Inference Engine.
@@ -134,6 +134,9 @@ see the output in the console showing the objects found and the confidence level
 - Running an application that uses the Inference Engine with a video to accomplish a task, in this case, identifying pedestrians.
 - Modifying Inference Engine parameters.
 
+## Next Steps
+
+[Hello World | Part 2: Re-purpose a Pedestrian Detection application to identify cars (coming soon!)](https://)
 
 ## Additional resources
 
