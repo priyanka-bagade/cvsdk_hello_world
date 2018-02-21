@@ -2,21 +2,25 @@
 
 
 ## Prerequisite checklist
-- [ ] Verify hardware compatibility
+- [ ] [Verify hardware compatibility](https://software.intel.com/en-us/computer-vision-sdk?cid=sem43700020075377675&intel_term=computer+vision+sdk&gclid=CjwKCAiA9f7QBRBpEiwApLGUit1KXgtbu46anzhcsxJVBltKW-JOxPzucCmBxVDZwI_1H4FYgQZ-3RoC96sQAvD_BwE&gclsrc=aw.ds)
 - [ ] [Install OpenCL® and other dependencies](https://software.intel.com/en-us/articles/opencl-drivers)
 - [ ] [Install the Intel® CV SDK and set environment variables](https://software.intel.com/en-us/cvsdk-installguide-installing-on-linux-os)
 
-## Install the Hello World tutorial support files (trained models, videos, images)
+## Install the Hello World tutorial support files (models, videos, images, sample apps)
 
-#### 1. Create the directory /opt/intel/tutorials/cvsdk
+#### 1. Create the tutorial directory
 
-	mkdir -p /opt/intel/tutorials/cvsdk
+	mkdir -p /opt/intel/tutorials/cvsdk_hello_world
 
-#### 2. Go to the new directory
+#### 2. Change ownership of the tutorials directory to current user
 
-	cd /opt/intel/tutorials/cvsdk
+	sudo chown –R <user.user> /opt/intel/tutorials/cvsdk_hello_world
 
-#### 3. Download and clone the tutorial content to the current directory (opt/intel/tutorials/cvsdk). Four sub-directories are created: models, samples, videos, images
+#### 3. Navigate to the new directory
+
+	cd /opt/intel/tutorials/cvsdk_hello_world
+
+#### 4. Download and clone the tutorial content to the current directory (opt/intel/tutorials/cvsdk_hello_world). Four sub-directories are created: models, samples, videos, images
 
 	git clone https://github.com/hunnel/cvsdk_hello_world.git
 
@@ -28,11 +32,11 @@
 
 #### What you’re about to learn
 
-This tutorial uses a Single Shot MultiBox Detector (SSD) on a trained GoogleNet* model to walk you through the basic steps of using the Deep Learning Deployment Toolkit’s Inference Engine. The Inference Engine is included in the Intel® CV SDK, and you downloaded the trained model in the preparatory steps above. Although this tutorial uses GoogleNet, on your own you can perform inference on other neural network architectures, such as AlexNet*. 
+This tutorial uses a Single Shot MultiBox Detector (SSD) on a trained GoogleNet* model to walk you through the basic steps of using the Deep Learning Deployment Toolkit’s Inference Engine. The Inference Engine is included in the Intel® CV SDK, and you downloaded the trained model in the preparatory steps above. Although this tutorial uses GoogleNet, on your own you can perform inference on other neural network architectures, such as AlexNet*.
 
-You will begin this tutorial by using the Model Optimizer to convert the trained model to two Intermediate Representation (IR) files. Your result will be one .xml file and one .bin file. The Inference Engine requires this model conversion so it can use the IR as input. 
+You will begin this tutorial by using the Model Optimizer to convert the trained model to two Intermediate Representation (IR) files. Your result will be one .xml file and one .bin file. The Inference Engine requires this model conversion so it can use the IR as input.
 
-You will then use Inference on the IR files. Inference is the process of using a trained neural network to interpret meaning from data, such as images. The code sample in this tutorial uses images by feeding a short video of pedestrians, frame-by-frame, to the Inference Engine (the trained neural network). The result is image classification output -- text on a screen that displays information about the image, and a video that shows each pedestrian surrounded by a box. 
+You will then use Inference on the IR files. Inference is the process of using a trained neural network to interpret meaning from data, such as images. The code sample in this tutorial uses images by feeding a short video of pedestrians, frame-by-frame, to the Inference Engine (the trained neural network). The result is image classification output -- text on a screen that displays information about the image, and a video that shows each pedestrian surrounded by a box.
 
 The photo below shows an example frame from the inferred video. The red boxes around the individuals are the result of using the Inference Engine to identify pedestrians. In the original video, the boxes do not exist. The Inference Engine identified the objects in the video that it inferred to be pedestrians and drew the identifying boxes around them.
 
@@ -40,22 +44,22 @@ The photo below shows an example frame from the inferred video. The red boxes ar
 
 #### Overview of an end-to-end Computer Vision Application
 
-The figure below shows you the full end-to-end computer vision application process. Some parts of computer vision use components outside of the Intel® CV SDK, but are included in the diagram because these pieces are necessary to your understanding deep learning.  
+The figure below shows you the full end-to-end computer vision application process. Some of the components shown are not part of the Intel® CV SDK, but are included in the diagram to help illustrate a complete E2E CV process.  
 
-For example, the Intel® CV SDK requires a trained model. The first column of the figure shows you where and how the trained model is created. This is represented by the light gray box with the heading text "Create a Deep-Learning Model." If you need to retrain the model you are using in the Intel® CV SDK, you will need to return to this part of the process to retrain your model. For this tutorial, a trained model is provided.
+For example, the Intel® CV SDK requires a trained model. The first two columns of the figure cover aquiring a deep-learning model and refining it for your application. If you need to retrain the model after optimization using in the Intel® CV SDK, you will need to return to this part of the process, retrain your model, then re-run the Model Optimizer to generate new .IR files. For this tutorial, a trained model is provided.
 
-After your trained model is completed, you are ready to use the Intel® CV SDK in a developer environment to "Optimize Application Performance." This piece of the process uses the Model Optimizer on the trained model. In addition to the Model Optimizer, you might also need to use the Intel® Media SDK, a separate product to work with video.
+After your trained model is completed, you are ready to use the Intel® CV SDK in a developer environment to write an application and optimize its performance on Intel® hardware. During this phase of development you use the Model Optimizer on the pre-trained model. In addition to optimizing your model, you also need to integrate the components within your application by calling the .IR files and the Inference Engine. Depending on your specific needs, you may also utilize other Intel® tools, like the Intel® Media SDK, in your application.
 
-Once you have used the Model Optimizer, you are ready to deploy your computer vision, the third column of the illustration. This piece of the process uses the Inference component of the Intel® CV SDK. In this tutorial, deployment is represented by using the video provided with this tutorial instead of using data directly from a video camera or on a separate piece of hardware.
+Once you have used the Model Optimizer and integrated the applicable components, you are ready to deploy your application at the edge. This piece of the process uses the Inference component of the Intel® CV SDK. In this tutorial, deployment is represented by using the video provided with this tutorial instead of using data directly from a video camera or on a separate piece of hardware.
+
+![alt text](https://github.com/hunnel/cvsdk_hello_world/blob/master/images/e2e_cv_diagram.png "End-to-end computer vision workflow")
 
 In the figure:
-- The light blue boxes are the focus of this tutorial. 
-- The dark gray boxes are column headings to show where the work happpens. 
+- The light blue boxes are the focus of this tutorial.
+- The dark gray boxes are column headings to show where the work happpens.
 - The light gray boxes shows the overall part of the process accomplished by each column.
 - The white boxes are not addressed by this tutorial.
 - The blue text tells you which piece of software is needed to perform the action in the box, whether or not they are addressed by this tutorial.
-
-![alt text](https://github.com/hunnel/cvsdk_hello_world/blob/master/images/e2e_cv_diagram.png "End-to-end computer vision workflow")
 
 #### Why this tutorial is important for you
 
@@ -89,7 +93,7 @@ again
 #### 3. Verify creation of the optimized model files (the IR files)
 
 #### 4. Exit super user mode
-	
+
 	exit
 
 ## Use the optimized models and Inference Engine in a pedestrian detection application
@@ -104,7 +108,7 @@ again
 
  	make
 
-#### 4. Run the pedestrian detection sample application to use the Inference Engine on a video 
+#### 4. Run the pedestrian detection sample application to use the Inference Engine on a video
 *Explain the parameters prior to running the app*
 
 ##### *Note: If you get an error related to "undefined reference to 'google::FlagRegisterer...", try uninstalling libgflags-dev: sudo apt-get remove libgflags-dev*
@@ -137,11 +141,11 @@ see the output in the console showing the objects found and the confidence level
 #### 1. What you’re about to learn and why it is important
 
 In Part 1 of this tutorial series, you used the Inference Engine to identify parameters by putting a bounding box around each person. In this tutorial, you will build on your Intel CV SDK skills by using the same sample source code to identify cars.
-	
+
 #### 2. Provide an example of what success looks like in this module
 
 > Show a side-by-side comparison of the pedestrian video clip: original vs with bounding boxes
-	
+
 #### 3. Conceptual diagram: E2E video application developer journey map
 
 > (continue to show this throughout the module as it changes? i.e. ‘you are here’)
