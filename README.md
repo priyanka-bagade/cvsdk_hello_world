@@ -126,24 +126,22 @@ see the output in the console showing the objects found and the confidence level
 
 ## Recap
 
-You can now be successful with these tasks:
-- Running the Model Optimizer against a trained Cafe model.
-- Identifing the two required Intermediate Representation (IR) files, and their directory location.
-- Locating the source code that runs the Inference Engine.
-- Building an Inference Engine.
-- Running an application that uses the Inference Engine with a video to accomplish a task, in this case, identifying pedestrians.
-- Modifying Inference Engine parameters.
+What this tutorial covered:
+- How to run the Model Optimizer against a trained Caffe model to create the optimized .IR files.
+- How to call the .IR files and Inference Engine from an application.
+- How to run a CV application using the optimized model and Inference Engine to analyze video data and apply application logic, in this case, identifying pedestrians.
+- Explore and modify application parameters to achieve various results.
 
 ## Next Steps
 
-[Hello World | Part 2: Re-purpose a Pedestrian Detection application to identify cars (coming soon!)](https://)
+[Hello World | Part 2: Re-purpose a Pedestrian Detection application to identify cars (coming soon)](https://)
 
 ## Additional resources
 
-- [CV SDK landing page (IDZ)](https://software.intel.com/en-us/computer-vision-sdk?cid=sem43700020075377675&intel_term=computer+vision+sdk&gclid=CjwKCAiA9f7QBRBpEiwApLGUit1KXgtbu46anzhcsxJVBltKW-JOxPzucCmBxVDZwI_1H4FYgQZ-3RoC96sQAvD_BwE&gclsrc=aw.ds)
+- [CV SDK developer portal (IDZ)](https://software.intel.com/en-us/computer-vision-sdk?cid=sem43700020075377675&intel_term=computer+vision+sdk&gclid=CjwKCAiA9f7QBRBpEiwApLGUit1KXgtbu46anzhcsxJVBltKW-JOxPzucCmBxVDZwI_1H4FYgQZ-3RoC96sQAvD_BwE&gclsrc=aw.ds)
 - [Developer guide](https://software.intel.com/en-us/cvsdk-inference-engine-apiref)
 - [API references](https://software.intel.com/en-us/inference-engine-devguide)
 
-OpenCL is a trademark of Apple Inc. used by permission by Khronos
-Intel is a registered trademark of Intel Corporation
-* Other brands and names may be the property of others
+> OpenCL is a trademark of Apple Inc. used by permission by Khronos
+> Intel is a registered trademark of Intel Corporation
+> * Other brands and names may be the property of others
