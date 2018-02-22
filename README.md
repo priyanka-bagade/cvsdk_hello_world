@@ -152,19 +152,17 @@ You should see a video play with people walking across and red bounding boxes ar
 
 ### \(Optional) Explore using different parameters to see how they affect the results
 
-#### 1. The sample video file contains approximately 790 frames; however, in the previous example we opted to ran inference on a subset of those frames. Update the -fr parameter flag to adjust the amount of frames being processed through the Inference Engine.
+#### 1. Adjust the number of video frames to run through the Inference Engine
+The sample video file contains approximately 790 frames; however, in the previous example we opted to ran inference on a subset of those frames. Update the -fr parameter flag to adjust the amount of frames being processed through the Inference Engine.
 	
 	./IEobjectdetection -i opt/intel/tutorials/cvsdk_hello_world/hello_world_1.avi -fr 790 -m artifacts/VGG_VOC0712_SSD_300x300_deploy/VGG_VOC0712_SSD_300x300_deploy.xml -d CPU -l pascal_voc_classes.txt
 
-#### 2. You can also try changing the confidence level threshold. You will see a lot more bounding boxes around the people, but will have more instances of bounding boxes being drawn around non-pedestrian objects.
+#### 2. Modify the object detection confidence level threshold
+You can also try overriding the confidence level threshold. By setting the new threshold to 0.1, you will see a lot more bounding boxes around the people, but will have more instances of 'false' boxes appearing around non-pedestrian objects.
 	
 	./IEobjectdetection -i opt/intel/tutorials/cvsdk_hello_world/hello_world_1.avi -fr 200 -m artifacts/VGG_VOC0712_SSD_300x300_deploy/VGG_VOC0712_SSD_300x300_deploy.xml -d CPU -l pascal_voc_classes.txt -thresh 0.1
 	
 <br>
-<br>
-
-***
-
 <br>
 <br>
    
