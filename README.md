@@ -41,7 +41,7 @@ You will begin this tutorial by using the Model Optimizer to convert the trained
 
 You will then use Inference on the IR files. Inference is the process of using a trained neural network to interpret meaning from data, such as images. The code sample in this tutorial uses images by feeding a short video of pedestrians, frame-by-frame, to the Inference Engine (the trained neural network). The result is image classification output -- text on a screen that displays information about the image, and a video that shows each pedestrian surrounded by a box.
 
-The photo below shows an example frame from the inferred video. The red boxes around the individuals are the result of using the Inference Engine to identify pedestrians. In the original video, the boxes do not exist. The Inference Engine identified the objects in the video that it inferred to be pedestrians and drew the identifying boxes around them.
+The photo below shows an example frame from the inferred video. The red boxes around the individuals are the result of using the Inference Engine to identify pedestrians. In the original video, the boxes do not exist. The Inference Engine identified objects in the video that it inferred to be pedestrians and drew bounding boxes around them.
 
 <br>
 
@@ -51,13 +51,7 @@ The photo below shows an example frame from the inferred video. The red boxes ar
 
 ### Overview of an end-to-end computer vision application workflow
 
-The figure below shows you the full end-to-end computer vision application process. Some of the components shown are not part of the Intel® CV SDK, but are included in the diagram to help illustrate a complete E2E CV process.  
-
-For example, the Intel® CV SDK requires a trained model. The first two columns of the figure cover acquiring a deep-learning model and refining it for your application. If you need to retrain the model after optimization using in the Intel® CV SDK, you will need to return to this part of the process, retrain your model, then re-run the Model Optimizer to generate new .IR files. For this tutorial, a trained model is provided.
-
-After your trained model is completed, you are ready to use the Intel® CV SDK in a developer environment to write an application and optimize its performance on Intel® hardware. During this phase of development you use the Model Optimizer on the pre-trained model. In addition to optimizing your model, you also need to integrate the components within your application by calling the .IR files and the Inference Engine. Depending on your specific needs, you may also utilize other Intel® tools, like the Intel® Media SDK, in your application.
-
-Once you have used the Model Optimizer and integrated the applicable components, you are ready to deploy your application at the edge. This piece of the process uses the Inference component of the Intel® CV SDK. In this tutorial, deployment is represented by using the video provided with this tutorial instead of using data directly from a video camera or on a separate piece of hardware.
+The figure below shows an example of an end-to-end computer vision application workflow. Some of the components shown are not part of the Intel® CV SDK, but are included in the diagram to help illustrate a complete end-to-end computer vision process.
 
 ![Diagram of an end-to-end computer vision workflow](https://github.com/hunnel/cvsdk_hello_world/blob/master/images/e2e_cv_diagram.png "End-to-end computer vision workflow")
 
@@ -72,12 +66,9 @@ Once you have used the Model Optimizer and integrated the applicable components,
 
 ### Why this tutorial is important for you
 
-Deep learning is a complex process. To be successful at optimizing and deploying your own models, it is necessary to understand the process flow of moving from a trained model to an executable application. The illustration above gives you an overview of the process flow, and the steps in the tutorial reinforce selected steps in this process.
-
-This video in this tutorial prepares you for more difficult deep learning scenarios. For example, this tutorial provides the basis of code for security functions like:
-
-- Triggering an action if Inference detects someone entering an environment. For example, a homeowner might want to be alerted if a person walks onto their property, but not an animal.
-- Comparing the number of people leaving an environment to the number of people who entered the environment. For example, a store might want to be alerted at closing time that someone might still be on the premises.
+The Hello World tutorial serves two purposes:
+	1. to ensure complete and accurate installation and setup of the Intel CV SDK and
+	2. to introduce baseline capabilities needed to optimize end-to-end computer vision and deep-learning on Intel hardware.
 
 <br>
 
