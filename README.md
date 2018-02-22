@@ -56,11 +56,9 @@ The figure below shows an example of an end-to-end computer vision application w
 ![Diagram of an end-to-end computer vision workflow](https://github.com/hunnel/cvsdk_hello_world/blob/master/images/e2e_cv_diagram.png "End-to-end computer vision workflow")
 
 **In the figure:**
-- The blue boxes highlight the focus of this tutorial.
-- The dark gray boxes are column headings to show where the work happens.
-- The light gray boxes shows the overall part of the process accomplished by each column.
-- The white boxes are not directly addressed by this tutorial.
-- The blue text shows which piece of Intel® software performs the action in the box, whether or not they are addressed by this tutorial.
+- dark blue boxes highlight the focus of this tutorial
+- white boxes are not directly addressed by this tutorial
+- light blue text highlights other Intel® software tools available to use in various steps of an end-to-end computer vision workflow
 
 <br>
 
@@ -69,7 +67,7 @@ The figure below shows an example of an end-to-end computer vision application w
 The Hello World tutorial serves two purposes:
 <ol>
 	<li>to ensure complete and accurate installation and setup of the Intel CV SDK and</li>
-	<li>to introduce baseline capabilities needed to optimize end-to-end computer vision and deep-learning on Intel hardware.</li>
+	<li>to introduce baseline capabilities needed to optimize end-to-end computer vision and deep-learning on Intel hardware</li>
 </ol>
 
 <br>
