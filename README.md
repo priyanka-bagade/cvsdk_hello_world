@@ -158,7 +158,7 @@ You should see a video play with people walking across and red bounding boxes ar
 
 #### 2. You can also try changing the confidence level threshold. You will see a lot more bounding boxes around the people, but will have more instances of bounding boxes being drawn around non-pedestrian objects.
 	
-	./IEobjectdetection -i opt/intel/tutorials/cvsdk_hello_world/hello_world_1.avi -fr 790 -m artifacts/VGG_VOC0712_SSD_300x300_deploy/VGG_VOC0712_SSD_300x300_deploy.xml -d CPU -l pascal_voc_classes.txt -thresh 0.1
+	./IEobjectdetection -i opt/intel/tutorials/cvsdk_hello_world/hello_world_1.avi -fr 200 -m artifacts/VGG_VOC0712_SSD_300x300_deploy/VGG_VOC0712_SSD_300x300_deploy.xml -d CPU -l pascal_voc_classes.txt -thresh 0.1
 	
 <br>
 <br>
