@@ -1,3 +1,5 @@
+
+
 # Intel® Computer Vision SDK | Hello World Tutorial
 
 <br>
@@ -15,7 +17,7 @@
 
 	mkdir -p /opt/intel/tutorials/cvsdk_hello_world
 
-#### 2. Change ownership of the tutorials directory to current user
+#### 2. Change ownership of the tutorial directory to current user
 
 	sudo chown –R <user.user> /opt/intel/tutorials/cvsdk_hello_world
 
@@ -41,11 +43,13 @@ You will then use Inference on the IR files. Inference is the process of using a
 
 The photo below shows an example frame from the inferred video. The red boxes around the individuals are the result of using the Inference Engine to identify pedestrians. In the original video, the boxes do not exist. The Inference Engine identified the objects in the video that it inferred to be pedestrians and drew the identifying boxes around them.
 
-![alt text](https://github.com/hunnel/cvsdk_hello_world/blob/master/images/1-obj_detect_ped_demo_3.jpg "pedestrian detection success")
+<br>
+
+![image of video data before and after inference](https://github.com/hunnel/cvsdk_hello_world/blob/master/images/obj_detect_ped_demo_before_and_after.png "pedestrian detection success")
 
 <br>
 
-### Overview of an end-to-end computer vision application
+### Overview of an end-to-end computer vision application workflow
 
 The figure below shows you the full end-to-end computer vision application process. Some of the components shown are not part of the Intel® CV SDK, but are included in the diagram to help illustrate a complete E2E CV process.  
 
@@ -55,7 +59,7 @@ After your trained model is completed, you are ready to use the Intel® CV SDK i
 
 Once you have used the Model Optimizer and integrated the applicable components, you are ready to deploy your application at the edge. This piece of the process uses the Inference component of the Intel® CV SDK. In this tutorial, deployment is represented by using the video provided with this tutorial instead of using data directly from a video camera or on a separate piece of hardware.
 
-![alt text](https://github.com/hunnel/cvsdk_hello_world/blob/master/images/e2e_cv_diagram.png "End-to-end computer vision workflow")
+![Diagram of an end-to-end computer vision workflow](https://github.com/hunnel/cvsdk_hello_world/blob/master/images/e2e_cv_diagram.png "End-to-end computer vision workflow")
 
 **In the figure:**
 - The blue boxes highlight the focus of this tutorial.
@@ -84,41 +88,43 @@ This video in this tutorial prepares you for more difficult deep learning scenar
 
 ## Optimize a deep-learning model using the Model Optimizer (MO)
 
-#### 1. Navigate to the sample directory
+#### 1. Navigate to the cv-sdk directory
 
-	cd /opt/intel/tutorials/cvsdk_hello_world/samples/
+	cd /opt/intel/computer_vision_sdk_2018.0.182/deployment_tools/model_optimizer
 
-#### 2. Run the Model Optimizer on the trained Caffe* model. This step generates one .xml file and one .bin file, both in the directory  <current_dir>/artifacts
+#### 2. Run the Model Optimizer on the pretrained Caffe* model. This step generates one .xml file and one .bin file and place both files in the tutorial samples directory (located here: /opt/intel/tutorials/cvsdk/cvsdk_hello_world/samples/artifacts)
 
-	```sudo su```
-	```source /opt/intel/computer_vision_sdk_2017.1.163/bin/setupvars.sh```
-	```python runMO.py -w SSD_GoogleNetV2_caffe/SSD_GoogleNetV2.caffemodel -d SSD_GoogleNetV2_caffe/SSD_GoogleNetV2_Deploy.prototxt```
+	sudo apt install python3-pip
+	pip3 install -r requirements_caffe.txt 
+	python3 mo_caffe.py --input_model /opt/intel/tutorials/cvsdk/cvsdk_hello_world/samples/SSD_GoogleNetV2.caffemodel -o /opt/intel/tutorials/cvsdk/cvsdk_hello_world/samples/
 
-The Model Optimizer converts a trained Caffe model to be compatible with the Intel Inference Engine and optimizes it for Intel architecture. These are the files you would include with your C++ application to apply inference to visual data.
+The Model Optimizer converts a pretrained Caffe model to be compatible with the Intel Inference Engine and optimizes it for Intel architecture. These are the files you would include with your C++ application to apply inference to visual data.
 	
-> **Note:** if you continue to train/update the Caffe model, you would then need to re-run the Model Optimizer on the updated model.
+> **Note:** if you continue to train or make changes to the Caffe model, you would then need to re-run the Model Optimizer on the updated model.
 
-#### 3. Verify creation of the optimized model files (the IR files)
+#### 3. Navigate to the tutorial sample directory
+
+	cd /opt/intel/tutorials/cvsdk_hello_world
+
+#### 4. Verify creation of the optimized model files (the IR files)
 
 	ls
 
-You should see the following two files listed in this directory: **VGG_VOC0712_SSD_300x300_deploy.xml** and **VGG_VOC0712_SSD_300x300_deploy.bin**
-
-#### 4. Exit super user mode
-
-	exit
+You should see the following two files listed in this directory: **SSD_GoogleNetV2.xml** and **SSD_GoogleNetV2.bin**
 
 <br>
 <br>
 
 ## Use the optimized models and Inference Engine in a pedestrian detection application
 
+
 #### 1. Open the sample app source code to view the lines that call the Inference Engine.
-<ul>
-	<li> Lines x through x call the Inference Engine
-	<li> Lines x through x reference the optimized model files (**VGG_VOC0712_SSD_300x300_deploy.xml** and **VGG_VOC0712_SSD_300x300_deploy.bin**)
-	<li> Lines x through x define the confidence interval and...
-</ul>
+<ul><ul>
+	<li> Line 39 &#8212; adds the Inference Engine plugin to your application
+	<li> Line 107 &#8212; sets the confidence threshold for object detection
+	<li> Lines 382-404 &#8212; loads the Inference Engine plugin for use within the application
+	<li> Lines 506-515 &#8212; loads the model file into the Inference Engine plug-in
+</ul></ul>
 
 #### 2. Close the source file
 
@@ -127,15 +133,15 @@ You should see the following two files listed in this directory: **VGG_VOC0712_S
  	make
 
 #### 4. Run the pedestrian detection sample application to use the Inference Engine on a video
-The below command runs the application using the following parameters:
-	<ul><ul>
+The below command runs the application using the following parameters: 
+<ul><ul>
 		<li> number of frames to process (-fr)
 		<li> location of the optimized deep-learning model (-m)
 		<li> target device (CPU or GPU) to be used for inference (-d)
 		<li> data labels list location (-l)
 	</ul></ul>
 
-	```./IEobjectdetection -i opt/intel/tutorials/cvsdk/videos/vtest.avi -fr 200 -m artifacts/VGG_VOC0712_SSD_300x300_deploy/VGG_VOC0712_SSD_300x300_deploy.xml -d CPU -l pascal_voc_classes.txt```
+	./IEobjectdetection -i opt/intel/tutorials/cvsdk_hello_world/hello_world_1.avi -fr 200 -m artifacts/VGG_VOC0712_SSD_300x300_deploy/VGG_VOC0712_SSD_300x300_deploy.xml -d CPU -l pascal_voc_classes.txt
 
 
 You should see a video play with people walking across and red bounding boxes around them. You should also see the output in the console showing the objects found and the confidence level. The higher the confidence level, the more likely the model is correctly identifying and drawing bounding boxes around pedestrians in the video. (for example: 0.83 is more confident than 0.23)
@@ -146,13 +152,17 @@ You should see a video play with people walking across and red bounding boxes ar
 
 ### \(Optional) Explore using different parameters to see how they affect the results
 
-#### 1. *define some suggested activities here and describe what should happen/what it means*
+#### 1. Adjust the number of video frames to run through the Inference Engine
+The sample video file contains approximately 790 frames; however, in the previous example we opted to ran inference on a subset of those frames. Update the -fr parameter flag to adjust the amount of frames being processed through the Inference Engine.
+	
+	./IEobjectdetection -i opt/intel/tutorials/cvsdk_hello_world/hello_world_1.avi -fr 790 -m artifacts/VGG_VOC0712_SSD_300x300_deploy/VGG_VOC0712_SSD_300x300_deploy.xml -d CPU -l pascal_voc_classes.txt
 
+#### 2. Modify the object detection confidence level threshold
+You can also try overriding the confidence level threshold. By setting the new threshold to 0.1, you will see a lot more bounding boxes around the people, but will have more instances of 'false' boxes appearing around non-pedestrian objects.
+	
+	./IEobjectdetection -i opt/intel/tutorials/cvsdk_hello_world/hello_world_1.avi -fr 200 -m artifacts/VGG_VOC0712_SSD_300x300_deploy/VGG_VOC0712_SSD_300x300_deploy.xml -d CPU -l pascal_voc_classes.txt -thresh 0.1
+	
 <br>
-<br>
-
-***
-
 <br>
 <br>
    
@@ -174,9 +184,11 @@ You should see a video play with people walking across and red bounding boxes ar
    
 ## Additional resources
 
-- [CV SDK landing page (IDZ)](https://software.intel.com/en-us/computer-vision-sdk?cid=sem43700020075377675&intel_term=computer+vision+sdk&gclid=CjwKCAiA9f7QBRBpEiwApLGUit1KXgtbu46anzhcsxJVBltKW-JOxPzucCmBxVDZwI_1H4FYgQZ-3RoC96sQAvD_BwE&gclsrc=aw.ds)
-- [Developer guide](https://software.intel.com/en-us/cvsdk-inference-engine-apiref)
-- [API references](https://software.intel.com/en-us/inference-engine-devguide)
+- [CV SDK home page (IDZ)](https://software.intel.com/en-us/computer-vision-sdk?cid=sem43700020075377675&intel_term=computer+vision+sdk&gclid=CjwKCAiA9f7QBRBpEiwApLGUit1KXgtbu46anzhcsxJVBltKW-JOxPzucCmBxVDZwI_1H4FYgQZ-3RoC96sQAvD_BwE&gclsrc=aw.ds)
+- [Deep Learning Inference Engine Developer Guide](https://software.intel.com/en-us/inference-engine-devguide)
+- [API Reference for the Deep Learning Inference Engine](https://software.intel.com/en-us/cvsdk-inference-engine-apiref)
+- [Intel® CV SDK Code Samples](https://software.intel.com/en-us/computer-vision-sdk-support/code-samples)
+- [Using Custom Layers Tutorial with the Deep-Learning Deployment Toolkit](https://software.intel.com/en-us/cvsdk-custom-layers-support-in-inference-engine-tutorial)
 
 <br>
 <br>
