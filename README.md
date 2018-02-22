@@ -67,8 +67,10 @@ The figure below shows an example of an end-to-end computer vision application w
 ### Why this tutorial is important for you
 
 The Hello World tutorial serves two purposes:
-	1. to ensure complete and accurate installation and setup of the Intel CV SDK and
-	2. to introduce baseline capabilities needed to optimize end-to-end computer vision and deep-learning on Intel hardware.
+<ol>
+	<li>to ensure complete and accurate installation and setup of the Intel CV SDK and</li>
+	<li>to introduce baseline capabilities needed to optimize end-to-end computer vision and deep-learning on Intel hardware.</li>
+</ol>
 
 <br>
 
