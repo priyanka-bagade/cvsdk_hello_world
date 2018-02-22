@@ -184,9 +184,11 @@ You can also try overriding the confidence level threshold. By setting the new t
    
 ## Additional resources
 
-- [CV SDK landing page (IDZ)](https://software.intel.com/en-us/computer-vision-sdk?cid=sem43700020075377675&intel_term=computer+vision+sdk&gclid=CjwKCAiA9f7QBRBpEiwApLGUit1KXgtbu46anzhcsxJVBltKW-JOxPzucCmBxVDZwI_1H4FYgQZ-3RoC96sQAvD_BwE&gclsrc=aw.ds)
-- [Developer guide](https://software.intel.com/en-us/cvsdk-inference-engine-apiref)
-- [API references](https://software.intel.com/en-us/inference-engine-devguide)
+- [CV SDK home page (IDZ)](https://software.intel.com/en-us/computer-vision-sdk?cid=sem43700020075377675&intel_term=computer+vision+sdk&gclid=CjwKCAiA9f7QBRBpEiwApLGUit1KXgtbu46anzhcsxJVBltKW-JOxPzucCmBxVDZwI_1H4FYgQZ-3RoC96sQAvD_BwE&gclsrc=aw.ds)
+- [Deep Learning Inference Engine Developer Guide](https://software.intel.com/en-us/inference-engine-devguide)
+- [API Reference for the Deep Learning Inference Engine](https://software.intel.com/en-us/cvsdk-inference-engine-apiref)
+- [Intel® CV SDK Code Samples](https://software.intel.com/en-us/computer-vision-sdk-support/code-samples)
+- [Using Custom Layers Tutorial with the Deep-Learning Deployment Toolkit](https://software.intel.com/en-us/cvsdk-custom-layers-support-in-inference-engine-tutorial)
 
 <br>
 <br>
